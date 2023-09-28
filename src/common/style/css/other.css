@@ -1,0 +1,23 @@
+.cu-p {
+    cursor: pointer;
+}
+.cu-d {
+    cursor: default;
+}
+
+.o-h {
+    overflow: hidden;
+}
+.oy-s {
+    overflow-y: scroll;
+}
+
+.ox-s {
+    overflow-x: scroll;
+}
+.pos-r{
+    position: relative;
+}
+.pos-a{
+    position: absolute;
+}
