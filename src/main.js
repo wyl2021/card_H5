@@ -9,6 +9,13 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import store from './store/index.js'
 import "@/common/style/index.css";
+import '@/assets/svg/iconfont/iconfont.js'
+import '@/assets/svg/iconfont/iconfont.scss'
+import SvgIcon from '@/components/SvgIcon/index.vue'// svg component
+Vue.component('svg-icon', SvgIcon)
+const req = require.context('./assets/svg', false, /\.svg$/)
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+requireAll(req)
 Vue.use(Vant);
 Vue.use(ElementUI);
 Vue.config.productionTip = false

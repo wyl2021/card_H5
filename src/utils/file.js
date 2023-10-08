@@ -9,5 +9,4 @@ export const getImageSize = function (url, callback) {
       callback&&callback(img.width, img.height);
     };
   };
-  
 };

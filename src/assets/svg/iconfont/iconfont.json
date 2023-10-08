@@ -1,0 +1,65 @@
+{
+  "id": "4275126",
+  "name": "saascard",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "阿库名片",
+  "glyphs": [
+    {
+      "icon_id": "8897354",
+      "name": "复制",
+      "font_class": "fuzhi",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "37574779",
+      "name": "info",
+      "font_class": "a-Frame21",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "37574778",
+      "name": "tel",
+      "font_class": "a-Frame3",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "37574777",
+      "name": "add",
+      "font_class": "a-Frame4",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "37574776",
+      "name": "Frame(5)",
+      "font_class": "a-Frame5",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "37568156",
+      "name": "Frame",
+      "font_class": "Frame",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "37568157",
+      "name": "Frame(1)",
+      "font_class": "a-Frame1",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "37568155",
+      "name": "Frame(2)",
+      "font_class": "a-Frame2",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    }
+  ]
+}

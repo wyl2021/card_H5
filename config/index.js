@@ -5,7 +5,6 @@
 const path = require('path')
 const resolve = dir => path.join(__dirname, dir)
 const os = require('os');
- 
 function getNetworkIp() {
   let needHost = ''; // 打开的host
   try {
@@ -33,26 +32,17 @@ module.exports = {
     //iview-loader  Vue 限制的两个标签 Switch 和 Circle
     config.module
       .rule('svg')
-      .exclude.add(resolve('src/assets/tempfile/svg'))
+      .exclude.add(resolve('src/assets/svg'))
       .end()
     config.module
       .rule('icons')
       .test(/\.svg$/)
-      .include.add(resolve('src/assets/tempfile/svg'))
+      .include.add(resolve('src/assets/svg'))
       .end()
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
       .options({
         symbolId: 'icon-[name]'
-      })
-      .end()
-    config.module
-      .rule('iview-loader')
-      .test(/\.vue$/)
-      .use('iview-loader')
-      .loader('iview-loader')
-      .tap(options => {
-        return {prefix: false}
       })
       .end()
   },
