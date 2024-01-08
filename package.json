@@ -10,14 +10,19 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "amfe-flexible": "^2.2.1",
     "element-ui": "^2.15.14",
+    "lib-flexible": "^0.3.2",
     "node-sass": "^4.14.1",
+    "postcss-pxtorem": "^5.1.1",
     "sass-loader": "^7.3.1",
     "svg-sprite-loader": "^6.0.11",
     "vant": "^2.13.0",
     "vue": "^2.5.2",
+    "vue-dplayer": "0.0.10",
     "vue-router": "^3.0.1",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "weixin-js-sdk": "^1.6.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
