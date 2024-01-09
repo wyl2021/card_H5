@@ -14,7 +14,7 @@
 
 <script>
 import iconContent from "@/components/temp/iconContent.vue";
-import ListBox1 from "../listBox/listBox1.vue";
+import ListBox1 from "@/components/temp/listBox/listBox1.vue";
 export default {
   components: {
     iconContent,

@@ -3,6 +3,7 @@
     <!-- info.type 1:个人形象照 2:扫码微信 -->
     <div v-if="info.type == 1">
       <iconContent
+
         width="18"
         height="18"
         :src="info.photoIcon"
@@ -12,8 +13,8 @@
       <div class="dp-f ai-c fd-c">
         <van-image
           class="mb-12"
-          width="110"
-          height="110"
+          width="176"
+          height="198"
           :src="info.photo"
         ></van-image>
       </div>
@@ -24,7 +25,7 @@
    </iconContent>
 
     <div class="dp-f ai-c fd-c">
-      <van-image class="mb-12" width="110" height="110" :src="info.wx"></van-image>
+      <van-image class="mb-12" width="156" height="156" :src="info.wx"></van-image>
       <div>
         <span class="fs-14 mr-10">{{ info.name }}</span>
         <span class="fs-10 c-666">{{ info.post }}</span>
