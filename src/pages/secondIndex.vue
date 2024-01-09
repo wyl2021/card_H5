@@ -1,7 +1,7 @@
 <!-- 第三个页面 -->
 <template>
   <div>
-    <aj-second-index ></aj-second-index>
+    <aj-second-index v-if="id=='aj'"></aj-second-index>
   </div>
 </template>
 
@@ -17,6 +17,7 @@ export default {
     };
   },
   created(){
+    console.log(localStorage.getItem("id"))
     this.id=localStorage.getItem("id")
   }
 };

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <van-popup v-model="show" class="popupStyle" position="bottom">
+    <van-popup :close-on-click-overlay="false" v-model="show" class="popupStyle" position="bottom">
       <div class="popHeader">
         <div>
           <div class="line"></div>
-          <span>企业成员</span>
+          <span style="font-size:18px">企业成员</span>
         </div>
         <van-button :color="popColor" @click.stop="commitUser"
           >确定切换</van-button

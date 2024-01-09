@@ -1,15 +1,18 @@
 <!-- 第二个页面 -->
 <template>
   <div>
-    <aj-third-index ></aj-third-index>
+    <aj-third-index v-if="id=='aj'"></aj-third-index>
+    <nh-third-index v-if="id=='nh'"></nh-third-index>
   </div>
 </template>
 
 <script>
 import ajThirdIndex from "@/components/temp/index/aj/ajThirdIndex";
+import NhThirdIndex from '@/components/temp/index/nh/nhThirdIndex.vue';
 export default {
   components: {
     ajThirdIndex,
+    NhThirdIndex,
 
   },
   data() {

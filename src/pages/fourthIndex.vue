@@ -1,7 +1,7 @@
 <!-- 第四个页面 -->
 <template>
   <div >
-    <aj-fourth-index></aj-fourth-index>
+    <aj-fourth-index v-if="id=='aj'"></aj-fourth-index>
   </div>
 </template>
 
