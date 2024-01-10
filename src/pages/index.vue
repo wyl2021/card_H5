@@ -2,14 +2,16 @@
   <div>
     <aj-index v-if="id == 'aj'"></aj-index>
     <nh-index v-if="id == 'nh'"></nh-index>
+    <jh-index v-if="id == 'jh'"></jh-index>
   </div>
 </template>
 
 <script>
 import ajIndex from "@/components/temp/index/aj/ajIndex.vue";
 import nhIndex from "@/components/temp/index/nh/nhIndex.vue";
+import jhIndex from "@/components/temp/index/jh/jhIndex.vue";
 export default {
-  components: { ajIndex, nhIndex },
+  components: { ajIndex, nhIndex, jhIndex },
   data() {
     return {
       id: "",
@@ -18,7 +20,7 @@ export default {
   created() {
     this.id = decodeURI(window.location.search);
     console.log(this.id);
-    this.id =this.id.match(/"([^"]*)"/)?this.id.match(/"([^"]*)"/)[1]:"aj"; // this.id.substring(this.id.indexOf('"')+1,this.id.length-1)
+    this.id = this.id.match(/"([^"]*)"/) ? this.id.match(/"([^"]*)"/)[1] : "aj"; // this.id.substring(this.id.indexOf('"')+1,this.id.length-1)
     localStorage.setItem("id", this.id);
     console.log(this.id == "aj");
   },

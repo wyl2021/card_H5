@@ -8,7 +8,7 @@
         height="18"
         :src="info.photoIcon"
       >
-        <template #content>个人形象照</template>
+        <template #content><div class="fs-16">个人形象照</div></template>
       </iconContent>
       <div class="dp-f ai-c fd-c">
         <van-image
@@ -21,7 +21,7 @@
     </div>
     <div v-if="info.type == 2">
       <iconContent width="18" height="18"  :src="info.wxIcon">
-    <template #content>扫码加微信</template>
+    <template #content><div class="fs-16">扫码加微信</div></template>
    </iconContent>
 
     <div class="dp-f ai-c fd-c">
