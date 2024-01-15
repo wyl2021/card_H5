@@ -6,6 +6,7 @@
         :width="width"
         :height="height"
         class="headerImage"
+
         :src="src || require('@/assets/tempfile/aj/headerImage/qywh.png')"
       ></van-image>
     </slot>

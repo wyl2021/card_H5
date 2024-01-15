@@ -76,26 +76,26 @@ export default {
         };
         break;
       case "nh":
-        this.configTabs={
+        this.configTabs = {
           activeColor: "#0E58A3",
           inactiveColor: "#333",
           list: [
-          {
-            id: 0,
-            text: "首页",
-            activeIcon: require("@/assets/tempfile/nh/tabIcon/shouye2.png"),
-            inactiveIcon: require("@/assets/tempfile/nh/tabIcon/shouye.png"),
-            path: "/",
-          },
-          {
-            id: 1,
-            text: "产品",
-            activeIcon: require("@/assets/tempfile/nh/tabIcon/chanpin2.png"),
-            inactiveIcon: require("@/assets/tempfile/nh/tabIcon/chanpin.png"),
-            path: "/thirdIndex",
-          },
-        ]
-        }
+            {
+              id: 0,
+              text: "首页",
+              activeIcon: require("@/assets/tempfile/nh/tabIcon/shouye2.png"),
+              inactiveIcon: require("@/assets/tempfile/nh/tabIcon/shouye.png"),
+              path: "/",
+            },
+            {
+              id: 1,
+              text: "产品",
+              activeIcon: require("@/assets/tempfile/nh/tabIcon/chanpin2.png"),
+              inactiveIcon: require("@/assets/tempfile/nh/tabIcon/chanpin.png"),
+              path: "/thirdIndex",
+            },
+          ],
+        };
         break;
       case "jh":
         this.configTabs = {
@@ -132,6 +132,76 @@ export default {
           ],
         };
         break;
+      case "gj":
+        this.configTabs = {
+          activeColor: "#392DDD",
+          inactiveColor: "#333",
+          list: [
+            {
+              id: 0,
+              text: "首页",
+              activeIcon: require("@/assets/tempfile/gj/tabIcon/shouye2.png"),
+              inactiveIcon: require("@/assets/tempfile/gj/tabIcon/shouye.png"),
+              path: "/",
+            },
+            {
+              id: 1,
+              text: "动态",
+              activeIcon: require("@/assets/tempfile/gj/tabIcon/dongtai2.png"),
+              inactiveIcon: require("@/assets/tempfile/gj/tabIcon/dongtai.png"),
+              path: "/thirdIndex",
+            },
+            {
+              id: 2,
+              text: "合作",
+              activeIcon: require("@/assets/tempfile/gj/tabIcon/hezuo2.png"),
+              inactiveIcon: require("@/assets/tempfile/gj/tabIcon/hezuo.png"),
+              path: "/secondIndex",
+            },
+            {
+              text: "探索",
+              activeIcon: require("@/assets/tempfile/gj/tabIcon/tansuo2.png"),
+              inactiveIcon: require("@/assets/tempfile/gj/tabIcon/tansuo.png"),
+              path: "/fourthIndex",
+            },
+          ],
+        };
+        break;
+        case 'tsz':
+        this.configTabs = {
+        activeColor:'#E50015',
+        inactiveColor:'#333',
+        list: [
+          {
+            id:0,
+            text: '首页',
+            activeIcon: require('@/assets/tempfile/tsz/tabIcon/image5.png'),
+            inactiveIcon: require('@/assets/tempfile/tsz/tabIcon/image1.png'),
+            path:'/'
+          },
+          {
+            id:1,
+            text: '资讯',
+            activeIcon: require('@/assets/tempfile/tsz/tabIcon/image6.png'),
+            inactiveIcon: require('@/assets/tempfile/tsz/tabIcon/image2.png'),
+            path:'/thirdIndex'
+          },
+          {
+            id:2,
+            text: '产品',
+            activeIcon: require('@/assets/tempfile/tsz/tabIcon/image7.png'),
+            inactiveIcon: require('@/assets/tempfile/tsz/tabIcon/image3.png'),
+            path:'/secondIndex'
+          },
+          {
+            text: '探索',
+            activeIcon: require('@/assets/tempfile/tsz/tabIcon/image8.png'),
+            inactiveIcon: require('@/assets/tempfile/tsz/tabIcon/image4.png'),
+            path:'/fourthIndex'
+          },
+        ]
+      };
+      break;
     }
   },
   computed: {

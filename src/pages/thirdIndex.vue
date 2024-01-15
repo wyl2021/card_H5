@@ -4,6 +4,8 @@
     <aj-third-index v-if="id=='aj'"></aj-third-index>
     <nh-third-index v-if="id=='nh'"></nh-third-index>
     <jh-third-index v-if="id=='jh'"></jh-third-index>
+    <gj-third-index v-if="id=='gj'"></gj-third-index>
+    <tsz-third-index v-if="id=='tsz'"></tsz-third-index>
   </div>
 </template>
 
@@ -11,12 +13,15 @@
 import ajThirdIndex from "@/components/temp/index/aj/ajThirdIndex.vue";
 import NhThirdIndex from '@/components/temp/index/nh/nhThirdIndex.vue';
 import jhThirdIndex from "@/components/temp/index/jh/jhThirdIndex.vue";
+import gjThirdIndex from '@/components/temp/index/gj/gjThirdIndex.vue';
+import tszThirdIndex from "@/components/temp/index/tsz/tszThirdIndex.vue";
 export default {
   components: {
     ajThirdIndex,
     NhThirdIndex,
-    jhThirdIndex
-
+    jhThirdIndex,
+    gjThirdIndex,
+    tszThirdIndex
   },
   data() {
     return {

@@ -3,6 +3,8 @@
     <aj-index v-if="id == 'aj'"></aj-index>
     <nh-index v-if="id == 'nh'"></nh-index>
     <jh-index v-if="id == 'jh'"></jh-index>
+    <gj-index v-if="id=='gj'" ></gj-index>
+    <tsz-index v-if="id='tsz'"></tsz-index>
   </div>
 </template>
 
@@ -10,8 +12,10 @@
 import ajIndex from "@/components/temp/index/aj/ajIndex.vue";
 import nhIndex from "@/components/temp/index/nh/nhIndex.vue";
 import jhIndex from "@/components/temp/index/jh/jhIndex.vue";
+import gjIndex from "@/components/temp/index/gj/gjIndex.vue";
+import tszIndex  from "@/components/temp/index/tsz/tszIndex.vue"
 export default {
-  components: { ajIndex, nhIndex, jhIndex },
+  components: { ajIndex, nhIndex, jhIndex,gjIndex,tszIndex },
   data() {
     return {
       id: "",
