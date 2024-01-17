@@ -202,6 +202,41 @@ export default {
         ]
       };
       break;
+      case "ym":
+      this.configTabs = {
+        activeColor:'#168ED3',
+        inactiveColor:'#333',
+        list: [
+          {
+            id:0,
+            text: '名片',
+            activeIcon: require('@/assets/tempfile/ym/tabIcon/mp.png'),
+            inactiveIcon: require('@/assets/tempfile/ym/tabIcon/nomp.png'),
+            path:'/'
+          },
+          {
+            id:1,
+            text: '动态',
+            activeIcon: require('@/assets/tempfile/ym/tabIcon/dt.png'),
+            inactiveIcon: require('@/assets/tempfile/ym/tabIcon/nodt.png'),
+            path:'/thirdIndex'
+          },
+          {
+            id:2,
+            text: '服务',
+            activeIcon: require('@/assets/tempfile/ym/tabIcon/fw.png'),
+            inactiveIcon: require('@/assets/tempfile/ym/tabIcon/nofw.png'),
+            path:'/secondIndex'
+          },
+          {
+            text: '探索',
+            activeIcon: require('@/assets/tempfile/ym/tabIcon/ts.png'),
+            inactiveIcon: require('@/assets/tempfile/ym/tabIcon/nots.png'),
+            path:'/fourthIndex'
+          },
+        ]
+      };
+      break;
     }
   },
   computed: {

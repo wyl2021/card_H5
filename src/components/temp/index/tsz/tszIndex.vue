@@ -39,10 +39,6 @@
       <tszFive id="cpfw">
 
       </tszFive>
-
-
-
-
     </div>
     <div class="h-50"></div>
     <tabbar :active="0"></tabbar>
