@@ -8,12 +8,13 @@
 export default {
   data(){
     return {
-      imageUrl:""
+      imageUrl:"",
     }
   },
   created(){
     console.log("页面传值",this.$route.params.id)
     this.imageUrl=this.$route.params.id
+    // this.isPage=this.id=='aj' || this.id=='nh' || this.id=='jh' || this.id=='gj' || this.id=='tsz' || this.id=='ym'
 
   }
   // watch:{

@@ -5,6 +5,7 @@
         <div class="h-10"></div>
         <router-link
           v-for="(item2, index2) in item.dataList"
+          :key="index2"
           :to="{
             path: '/solutionInfo',
             name: 'solutionInfo',

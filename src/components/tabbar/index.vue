@@ -6,17 +6,19 @@
       :active-color="configTabs.activeColor"
       :inactive-color="configTabs.inactiveColor"
     >
-      <van-tabbar-item :to="i.path" v-for="(i, n) in configTabs.list" :key="n">
+      <van-tabbar-item  :to="i.path" v-for="(i, n) in configTabs.list" :key="n">
         {{ i.text }}
         <template #icon="props">
           <img :src="props.active ? i.activeIcon : i.inactiveIcon" />
         </template>
       </van-tabbar-item>
     </van-tabbar>
+    <!-- <div style="height:5px"></div> -->
   </div>
 </template>
 <script>
 import { mapGetters, mapMutations } from "vuex";
+import axios from "axios";
 export default {
   props: {
     active: {
@@ -27,13 +29,18 @@ export default {
   data() {
     return {
       localActive: this.active,
+      // localActive: this.active,
       configTabs: {
         activeColor: "#0E58A3",
         inactiveColor: "#333",
         list: [],
         id: "",
+        buttonId:null
       },
     };
+  },
+  mounted() {
+    // this.fetchDataFromApi();
   },
   created() {
     console.log(localStorage.getItem("id"));
@@ -89,10 +96,24 @@ export default {
             },
             {
               id: 1,
+              text: "动态",
+              activeIcon: require("@/assets/tempfile/nh/tabIcon/dt.png"),
+              inactiveIcon: require("@/assets/tempfile/nh/tabIcon/nodt.png"),
+              path: "/thirdIndex",
+            },
+            {
+              id: 2,
               text: "产品",
               activeIcon: require("@/assets/tempfile/nh/tabIcon/chanpin2.png"),
               inactiveIcon: require("@/assets/tempfile/nh/tabIcon/chanpin.png"),
-              path: "/thirdIndex",
+              path: "/secondIndex",
+            },
+            {
+              id: 3,
+              text: "探索",
+              activeIcon: require("@/assets/tempfile/nh/tabIcon/ts.png"),
+              inactiveIcon: require("@/assets/tempfile/nh/tabIcon/nots.png"),
+              path: "/fourthIndex",
             },
           ],
         };
@@ -167,91 +188,194 @@ export default {
           ],
         };
         break;
-        case 'tsz':
+      case "tsz":
         this.configTabs = {
-        activeColor:'#E50015',
-        inactiveColor:'#333',
-        list: [
-          {
-            id:0,
-            text: '首页',
-            activeIcon: require('@/assets/tempfile/tsz/tabIcon/image5.png'),
-            inactiveIcon: require('@/assets/tempfile/tsz/tabIcon/image1.png'),
-            path:'/'
-          },
-          {
-            id:1,
-            text: '资讯',
-            activeIcon: require('@/assets/tempfile/tsz/tabIcon/image6.png'),
-            inactiveIcon: require('@/assets/tempfile/tsz/tabIcon/image2.png'),
-            path:'/thirdIndex'
-          },
-          {
-            id:2,
-            text: '产品',
-            activeIcon: require('@/assets/tempfile/tsz/tabIcon/image7.png'),
-            inactiveIcon: require('@/assets/tempfile/tsz/tabIcon/image3.png'),
-            path:'/secondIndex'
-          },
-          {
-            text: '探索',
-            activeIcon: require('@/assets/tempfile/tsz/tabIcon/image8.png'),
-            inactiveIcon: require('@/assets/tempfile/tsz/tabIcon/image4.png'),
-            path:'/fourthIndex'
-          },
-        ]
-      };
-      break;
+          activeColor: "#E50015",
+          inactiveColor: "#333",
+          list: [
+            {
+              id: 0,
+              text: "首页",
+              activeIcon: require("@/assets/tempfile/tsz/tabIcon/image5.png"),
+              inactiveIcon: require("@/assets/tempfile/tsz/tabIcon/image1.png"),
+              path: "/",
+            },
+            {
+              id: 1,
+              text: "资讯",
+              activeIcon: require("@/assets/tempfile/tsz/tabIcon/image6.png"),
+              inactiveIcon: require("@/assets/tempfile/tsz/tabIcon/image2.png"),
+              path: "/thirdIndex",
+            },
+            {
+              id: 2,
+              text: "产品",
+              activeIcon: require("@/assets/tempfile/tsz/tabIcon/image7.png"),
+              inactiveIcon: require("@/assets/tempfile/tsz/tabIcon/image3.png"),
+              path: "/secondIndex",
+            },
+            {
+              text: "探索",
+              activeIcon: require("@/assets/tempfile/tsz/tabIcon/image8.png"),
+              inactiveIcon: require("@/assets/tempfile/tsz/tabIcon/image4.png"),
+              path: "/fourthIndex",
+            },
+          ],
+        };
+        break;
       case "ym":
-      this.configTabs = {
-        activeColor:'#168ED3',
-        inactiveColor:'#333',
-        list: [
-          {
-            id:0,
-            text: '名片',
-            activeIcon: require('@/assets/tempfile/ym/tabIcon/mp.png'),
-            inactiveIcon: require('@/assets/tempfile/ym/tabIcon/nomp.png'),
-            path:'/'
-          },
-          {
-            id:1,
-            text: '动态',
-            activeIcon: require('@/assets/tempfile/ym/tabIcon/dt.png'),
-            inactiveIcon: require('@/assets/tempfile/ym/tabIcon/nodt.png'),
-            path:'/thirdIndex'
-          },
-          {
-            id:2,
-            text: '服务',
-            activeIcon: require('@/assets/tempfile/ym/tabIcon/fw.png'),
-            inactiveIcon: require('@/assets/tempfile/ym/tabIcon/nofw.png'),
-            path:'/secondIndex'
-          },
-          {
-            text: '探索',
-            activeIcon: require('@/assets/tempfile/ym/tabIcon/ts.png'),
-            inactiveIcon: require('@/assets/tempfile/ym/tabIcon/nots.png'),
-            path:'/fourthIndex'
-          },
-        ]
-      };
-      break;
+        this.configTabs = {
+          activeColor: "#168ED3",
+          inactiveColor: "#333",
+          list: [
+            {
+              id: 0,
+              text: "名片",
+              activeIcon: require("@/assets/tempfile/ym/tabIcon/mp.png"),
+              inactiveIcon: require("@/assets/tempfile/ym/tabIcon/nomp.png"),
+              path: "/",
+            },
+            {
+              id: 1,
+              text: "动态",
+              activeIcon: require("@/assets/tempfile/ym/tabIcon/dt.png"),
+              inactiveIcon: require("@/assets/tempfile/ym/tabIcon/nodt.png"),
+              path: "/thirdIndex",
+            },
+            {
+              id: 2,
+              text: "服务",
+              activeIcon: require("@/assets/tempfile/ym/tabIcon/fw.png"),
+              inactiveIcon: require("@/assets/tempfile/ym/tabIcon/nofw.png"),
+              path: "/secondIndex",
+            },
+            {
+              text: "探索",
+              activeIcon: require("@/assets/tempfile/ym/tabIcon/ts.png"),
+              inactiveIcon: require("@/assets/tempfile/ym/tabIcon/nots.png"),
+              path: "/fourthIndex",
+            },
+          ],
+        };
+        break;
+      default:
+      this.fetchDataFromApi()
+        // this.configTabs = {
+        //   activeColor: "#168ED3",
+        //   inactiveColor: "#333",
+        //   list: [
+        //     {
+        //       id: 0,
+        //       text: "名片",
+        //       activeIcon: require("@/assets/tempfile/ym/tabIcon/mp.png"),
+        //       inactiveIcon: require("@/assets/tempfile/ym/tabIcon/nomp.png"),
+        //       path: "/",
+        //     },
+        //     {
+        //       id: 1,
+        //       text: "动态",
+        //       activeIcon: require("@/assets/tempfile/ym/tabIcon/dt.png"),
+        //       inactiveIcon: require("@/assets/tempfile/ym/tabIcon/nodt.png"),
+        //       path: "/thirdIndex",
+        //     },
+        //   ],
+        // };
+        break;
     }
   },
   computed: {
     ...mapGetters(["tarbbarActive"]),
   },
+
   methods: {
     ...mapMutations("routeAddr", ["setActive"]),
 
     changeTab(e) {
-      // this.active=e
-      // this.setActive(e)
+      this.buttonId=this.configTabs.list[e].buttonId
+      this.getPage(e)
+    },
+    getPage(index){
+      // const params = { button: this.buttonId  };
+      localStorage.setItem("page"+index, this.buttonId);
+      // axios
+      //   .get("https://staticapi.oa00.com/v1/app/company/buttonImage/list", {
+      //     params,
+      //   }) // 这里替换为你要连接的接口地址
+      //   .then((response) => {
+      //     console.log(response);
+      //     if (response.data.code == 200) {
+      //       if (response.data.data.length != 0) {
+      //         let imageUrl={}
+      //         response.data.data.forEach((element, index) => {
+      //           imageUrl[index]=element.url
+      //         });
+      //         // this.$store.commit('page'+(index+1), imageUrl)
+      //         // console.log("页面数据",JSON.stringify(imageUrl))
+      //         // localStorage.setItem("page"+index, imageUrl.toString());
+      //         // console.log("本地储存数据",localStorage.getItem("page"+index))
+      //       }
+      //     }
+      //     console.log("11111",this.configTabs)
+      //     // this.responseData = response.data; // 将返回的数据赋值给responseData变量
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
+    },
+    fetchDataFromApi() {
+      // "bebbd1a0-b522-11ee-a473-00163e237fe6"
+      const params = { company: localStorage.getItem("id") };
+      axios
+        .get("https://staticapi.oa00.com/v1/app/company/button/list", {
+          params,
+        }) // 这里替换为你要连接的接口地址
+        .then((response) => {
+          console.log(response);
+          if (response.data.code == 200) {
+            if (response.data.data.total != 0) {
+              response.data.data.list.forEach((element, index) => {
+                this.configTabs.activeColor=element.colour_1?element.colour_1: "#E50015",
+                this.configTabs.inactiveColor=element.colour_2?element.colour_2: "#333",
+                this.configTabs.list.push({
+                  buttonId:element.id,
+                  id: index,
+                  text: element.name,
+                  activeIcon: element.image_1.url,
+                  inactiveIcon: element.image_2.url,
+                  path:
+                    index == 0
+                      ? "/"
+                      : index == 1
+                      ? "/thirdIndex"
+                      : index == 2
+                      ? "/secondIndex"
+                      : index == 3
+                      ? "/fourthIndex"
+                      : "/fiveIndex",
+                });
+              });
+              console.log(this.configTabs)
+              console.log(this.configTabs.list[0].buttonId)
+              localStorage.setItem("page0", this.configTabs.list[0].buttonId);
+              this.$emit('onPage',this.configTabs.list[0].buttonId)
+              console.log("本地储存数据",localStorage.getItem("page0"))
+              // this.buttonId=this.configTabs.list[0].buttonId
+              // this.getPage(0)
+            }
+          }
+          console.log("11111",this.configTabs)
+          // this.responseData = response.data; // 将返回的数据赋值给responseData变量
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+/deep/ .van-tabbar{
+  padding-bottom: 13px !important;
+}
 </style>

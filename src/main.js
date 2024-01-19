@@ -8,6 +8,7 @@ import store from './store/index.js';
 import VueDPlayer from "vue-dplayer";
 import ElementUI from 'element-ui';
 import SvgIcon from '@/components/SvgIcon/index.vue';// svg component
+import http from '@/api'
 import 'vant/lib/index.css';
 import 'amfe-flexible';
 import 'element-ui/lib/theme-chalk/index.css';
@@ -25,6 +26,7 @@ Vue.use(ElementUI);
 Vue.use(VueDPlayer);
 Vue.config.productionTip = false
 Vue.prototype.$store = store
+Vue.prototype.$http = http
 
 /* eslint-disable no-new */
 new Vue({

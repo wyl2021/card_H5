@@ -4,36 +4,25 @@
   <div class="home" ref="scrollContainer">
     <div class="home-main">
       <!-- 名片加名片背景 -->
-      <tempTop9 :cardId="1" :info="topInfo"></tempTop9>
+      <!-- <tempTop9 :cardId="1" :info="topInfo"></tempTop9> -->
+      <van-image  width="100%"
+            height="200px" :src="require('@/assets/tempfile/nh/image/header.png')"></van-image>
+     <van-image width="100%"
+            height="200px"  :src="require('@/assets/tempfile/nh/image/cardBg.png')"></van-image>
       <!-- 联系我们模块 -->
       <two2 :info="twoInfo"></two2>
+      <van-image width="100%"
+              :src="require('@/assets/tempfile/nh/image/smwx.png')"></van-image>
       <!-- 锚点导航栏 -->
       <tab :tabList="tabList" :tabId="tabId" :isTob="tabIsTop" id="tap" @butTab="butTab"></tab>
       <!-- 名片内容模块  纯静态则用图片van-image -->
-      <three2 id="qyjs"
-        :info="{
-          type: 1,
-          photo: require('@/assets/tempfile/nh/image/qiyejieshao.png'),
-        }"
-      ></three2>
-      <!-- 一般用于名片公司简介 -->
-      <four4 >
-        <!-- <template #cardContent></template> -->
-      </four4>
-      <!-- 纯静态页面则直接以图片显示 -->
-      <van-image
-      class="mb-12"
-          fit="contain"
-          width="100%"
-          :src="require('@/assets/tempfile/nh/image/qiyewenhua.png')"
-        ></van-image>
-        <five4 id="cpzs"></five4>
-      <van-image id="lxwm"
-      class="mb-12"
-          fit="contain"
-          width="100%"
-          :src="require('@/assets/tempfile/nh/image/lianxiwomen.png')"
-        ></van-image>
+
+     <van-image id="qyjs" :src="require('@/assets/tempfile/nh/image/qiyejieshao.png')"></van-image>
+     <van-image  :src="require('@/assets/tempfile/nh/image/rongyuzizhi.png')"></van-image>
+     <van-image :src="require('@/assets/tempfile/nh/image/qiyewenhua.png')"></van-image>
+     <van-image :src="require('@/assets/tempfile/nh/image/fzlc.png')"></van-image>
+     <van-image id="cpzs" :src="require('@/assets/tempfile/nh/image/gscp.png')"></van-image>
+     <van-image id="lxwm" :src="require('@/assets/tempfile/nh/image/lianxiwomen.png')"></van-image>
     </div>
     <div class="h-50"></div>
     <tabbar :active="0"></tabbar>

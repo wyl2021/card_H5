@@ -38,6 +38,16 @@ export default new Router({
       path: '/map',
       name: 'map',
       component: () => import('@/pages/map.vue')
-    }
+    },
+{
+  path:'/fiveIndex',
+  name: 'fiveIndex',
+  component: () => import('@/pages/fiveIndex.vue')
+},
+{
+  path:'/xlsl',
+  name: 'xlsl',
+  component: () => import('@/pages/xlsl.vue')
+}
   ]
 })

@@ -2,6 +2,7 @@ import Vue from "vue"
 import Vuex from "vuex"
 import system from "@/store/modules/system.js"
 import user from "@/store/modules/user.js"
+import image from "@/store/modules/imageUrl.js"
 import routeAddr from "@/store/modules/routeAddr.js"
 import getters from "./getters.js"
 
@@ -12,7 +13,8 @@ const store = new Vuex.Store({
 	modules:{
 		system,
 		user,
-		routeAddr
+		routeAddr,
+    image
 	}
 })
 

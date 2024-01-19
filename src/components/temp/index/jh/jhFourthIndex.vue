@@ -1,5 +1,10 @@
 <template>
   <div>
+    
+    <van-image :src="require('@/assets/tempfile/jh/ts.png')"> 
+    </van-image>
+
+    
     <tabbar :active="3"></tabbar>
   </div>
 </template>
@@ -14,5 +19,8 @@ export default {
 </script>
 
 <style>
-
+.ts{
+  width: 100%;
+  height: 100%;
+}
 </style>
