@@ -1,16 +1,19 @@
 <template>
   <div>
-    <five-index></five-index>
-
+    <component :is="currentComponent"></component>
+    <div class="h-50"></div>
   </div>
 </template>
 
 <script>
-import fiveIndex from '@/components/temp/index/aModel/fiveIndex.vue';
+import page from '@/components/componentsAll/page.js'
 export default {
-  components:{
-    fiveIndex
-  }
+  computed:{
+    currentComponent(){
+      console.log(page)
+      return page[localStorage.getItem("id")][4]
+    }
+  },
 }
 </script>
 

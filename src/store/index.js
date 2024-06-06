@@ -15,7 +15,9 @@ const store = new Vuex.Store({
 		user,
 		routeAddr,
     image
-	}
+	},
+
+
 })
 
 export default store

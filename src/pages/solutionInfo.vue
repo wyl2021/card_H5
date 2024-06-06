@@ -1,39 +1,42 @@
 <template>
-  <div style="margin: 16px;">
-      <van-image fit="contain"  :src="imageUrl"></van-image>
-  </div>
+	<div  >
+		<img :src="item" v-for="(item,index) in solutionImgList" style="width: 100%;display: block;"></img>
+	</div>
 </template>
 
 <script>
-export default {
-  data(){
-    return {
-      imageUrl:"",
-    }
-  },
-  created(){
-    console.log("页面传值",this.$route.params.id)
-    this.imageUrl=this.$route.params.id
-    // this.isPage=this.id=='aj' || this.id=='nh' || this.id=='jh' || this.id=='gj' || this.id=='tsz' || this.id=='ym'
+	export default {
+		data() {
+			return {
+				solutionImgList:[],
 
-  }
-  // watch:{
-  //   '$route.params.id':{
-  //     handler:function(val){
-  //       console.log(val)
-  //     },
-  //     deep:true
-  //   }
-  // }
-}
+			}
+		},
+
+	created() {
+    this.$route.meta.title=this.$route.query.title || '详情'
+    console.log("1231231",this.$route.query.id)
+			this.getDetail()
+		},
+		methods: {
+			getDetail(id){
+        console.log("1231231",this.$route.query.id)
+				this.$http.solutionDetail({id:this.$route.query.id}).then((res) => {
+						console.log(res)
+						if (res.code == 200) {
+							if (res.data.solution_image != []) {
+								res.data.solution_image.forEach((res2) => {
+									this.solutionImgList.push(res2.url)
+								})
+							}
+						}
+						console.log(this.solutionImgList)
+					})
+				},
+		}
+	}
 </script>
 
-<style lang="scss" scoped>
-html {
-  height: 100%;
-}
-body{
-  height: 100%;
-}
+<style>
 
 </style>

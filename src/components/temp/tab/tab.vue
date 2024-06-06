@@ -3,14 +3,16 @@
     <div class="tab">
       <div :class="{ topClass: isTob }" class="topClass1">
         <div
+
           @click="butTab(item.id)"
           v-for="(item, index) in tabList"
           :key="index"
           class="tabText"
           :class="{ selectTabText: tabId == item.id }"
+          :style="{'--color':color}"
         >
           {{ item.name }}
-          <div v-if="tabId == item.id" class="bottom"></div>
+          <div v-if="tabId == item.id" class="bottom" :style="{'--color':color}"></div>
         </div>
       </div>
     </div>
@@ -23,19 +25,24 @@ export default {
     tabList: Array,
     tabId: String,
     isTob: Boolean,
+    color:{
+      type:String,
+      default:'#00599d'
+    }
   },
   data() {
     return {};
   },
   methods: {
     butTab(id) {
+      console.log(id)
       this.$emit("butTab", id);
     },
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped vars="{ bottom }">
 .tab {
   // overflow-x: auto;
   // width: 100%;
@@ -58,7 +65,8 @@ export default {
   margin-top: 5px;
   position: relative;
   // bottom: 5rpx;
-  background: #00599d;
+  $color:var(--color);
+  background:#{$color} ;
   opacity: 1;
 }
 .topClass {
@@ -84,6 +92,8 @@ export default {
   // overflow-x: auto;
 }
 .selectTabText {
-  color: #00599d;
+  $color:var(--color);
+  color: #{$color};
+  font-weight: 600;
 }
 </style>
