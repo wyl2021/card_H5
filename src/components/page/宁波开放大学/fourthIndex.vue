@@ -1,26 +1,3 @@
-<template>
-  <div class="w-100 h-100">
-    <iframe  id="iframe"  src="https://szakvr.oa00.com/dd/tour/index.html" frameborder="0"></iframe>
-  </div>
-</template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style lang="scss" scoped>
-#iframe{
-  width: 100%;
-  height: 100%;
-
-}
-.w-100{
-  width: 100%;
-
-}
-.h-100{
-  height: 95vh;
-}
-</style>
+version https://git-lfs.github.com/spec/v1
+oid sha256:07d32c0b5010dbe949e8e9ff47b4db2258ebb7e6b57cf71e33481e1a1deb0c8d
+size 333

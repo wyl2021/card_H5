@@ -1,29 +1,3 @@
-<template>
-  <div>
-    <van-image
-      class="image"
-      :src="
-        require('@/assets/tempfile/' +
-          srcName +
-          '/cardBg/cardBg' +
-          src +
-          '.png')
-      "
-    ></van-image>
-  </div>
-</template>
-
-<script>
-export default {
-  props: {
-    src: Number,
-    srcName: String,
-  },
-};
-</script>
-
-<style lang="scss" scoped>
-.van-image {
-  margin-bottom: 10px !important;
-}
-</style>
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c37a3d0d1111e3f8d7d739f2b0fe822c36b1f31d19d36e52b91f025ca9215e9
+size 416

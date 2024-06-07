@@ -1,22 +1,3 @@
-<template>
-  <div>
-    <component :is="currentComponent"></component>
-    <div class="h-50"></div>
-  </div>
-</template>
-
-<script>
-import page from '@/components/componentsAll/page.js'
-export default {
-  computed:{
-    currentComponent(){
-      console.log(page)
-      return page[localStorage.getItem("id")][4]
-    }
-  },
-}
-</script>
-
-<style>
-
-</style>
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba0360f60818a16c7d3bcb5275bdd9c4b1b95cfe9b3044ca3929a96691f06e6a
+size 353

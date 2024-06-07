@@ -1,27 +1,3 @@
-<template>
-  <div>
-    <van-image :src="IMG+cardName+'/cardBg/cardBg'+cardId+'.png?time='+time"></van-image>
-  </div>
-</template>
-
-<script>
-export default {
-      props:{
-          cardName:String,
-          cardId:Number
-      },
-      data(){
-        return{
-          IMG:this.IMG,
-          time:null
-        }
-      },
-      created(){
-    this.time = Date.now()
-  },
-}
-</script>
-
-<style>
-
-</style>
+version https://git-lfs.github.com/spec/v1
+oid sha256:a31584904f3f56c98134333343db8b4e8e8a6e192c0a9dd6b2979d4185d46764
+size 404
