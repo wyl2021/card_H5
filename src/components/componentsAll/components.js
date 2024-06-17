@@ -22,6 +22,8 @@ import jwtContent from "@/components/content/jwtContent.vue"
 import hlContent from "@/components/content/hlContent.vue"
 import nameList from "@/components/tool/nameList.vue"
 import ywkjContent from "@/components/content/ywkjContent.vue"
+import swsContent from "@/components/content/swsContent.vue"
+import xyylContent from "@/components/content/xyylContent.vue"
 
 import yxPage from "../page/yx/yxPage.vue"
 import yxthirdIndex from "../page/yx/yxthirdIndex.vue"
@@ -59,6 +61,8 @@ Vue.component('jwtContent',jwtContent)
 Vue.component('hlContent',hlContent)
 Vue.component('nameList',nameList)
 Vue.component('ywkjContent',ywkjContent)
+Vue.component('swsContent',swsContent)
+Vue.component('xyylContent',xyylContent)
 
 Vue.component('mxtIndex',mxtIndex)
 Vue.component('mxtThirdIndex',mxtThirdIndex)

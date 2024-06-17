@@ -367,6 +367,118 @@ export default {
 
       ]
     }),
+    宁工理学院:tabIcon.getBox({
+      activeColor: "#004098",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "首页",
+          activeIcon: "nglxy/tabIcon/sy.png",
+          inactiveIcon: "nglxy/tabIcon/sy2.png",
+        },
+
+        {
+          text: "教学",
+          activeIcon: "nglxy/tabIcon/jx.png",
+          inactiveIcon: "nglxy/tabIcon/jx2.png",
+        },
+        {
+          text: "动态",
+          activeIcon: "nglxy/tabIcon/dt.png",
+          inactiveIcon: "nglxy/tabIcon/dt2.png",
+        },
+        // {
+        //   text: "全景",
+        //   activeIcon: "nglxy/tabIcon/qj.png",
+        //   inactiveIcon: "nglxy/tabIcon/qj2.png",
+        // },
+
+      ]
+    }),
+    硕为思:tabIcon.getBox({
+      activeColor: "#EB6027",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "首页",
+          activeIcon: "sws/tabIcon/sy.png",
+          inactiveIcon: "sws/tabIcon/sy2.png",
+        },
+
+        {
+          text: "介绍",
+          activeIcon: "sws/tabIcon/js.png",
+          inactiveIcon: "sws/tabIcon/js2.png",
+        },
+        {
+          text: "案例",
+          activeIcon: "sws/tabIcon/al.png",
+          inactiveIcon: "sws/tabIcon/al2.png",
+        },
+        {
+          text: "联系",
+          activeIcon: "sws/tabIcon/lx.png",
+          inactiveIcon: "sws/tabIcon/lx2.png",
+        },
+
+      ]
+    }),
+    心研医疗:tabIcon.getBox({
+      activeColor: "#D62223",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "xy/tabIcon/mp.png",
+          inactiveIcon: "xy/tabIcon/mp2.png",
+        },
+
+        {
+          text: "介绍",
+          activeIcon: "xy/tabIcon/js.png",
+          inactiveIcon: "xy/tabIcon/js2.png",
+        },
+        {
+          text: "产品",
+          activeIcon: "xy/tabIcon/cp.png",
+          inactiveIcon: "xy/tabIcon/cp2.png",
+        },
+        {
+          text: "探索",
+          activeIcon: "xy/tabIcon/ts.png",
+          inactiveIcon: "xy/tabIcon/ts2.png",
+        },
+
+      ]
+    }),
+    巨润国际:tabIcon.getBox({
+      activeColor: "#024190",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "jrgj/tabIcon/mp.png",
+          inactiveIcon: "jrgj/tabIcon/mp2.png",
+        },
+
+        {
+          text: "动态",
+          activeIcon: "jrgj/tabIcon/dt.png",
+          inactiveIcon: "jrgj/tabIcon/dt2.png",
+        },
+        {
+          text: "服务",
+          activeIcon: "jrgj/tabIcon/fw.png",
+          inactiveIcon: "jrgj/tabIcon/fw2.png",
+        },
+        {
+          text: "探索",
+          activeIcon: "jrgj/tabIcon/ts.png",
+          inactiveIcon: "jrgj/tabIcon/ts2.png",
+        },
+
+      ]
+    }),
   }
 }
 

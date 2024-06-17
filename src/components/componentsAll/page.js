@@ -68,6 +68,26 @@ import ywkjThirdIndex from "@/components/page/域外跨境/thirdIndex.vue"
 import ywkjSecondIndex from "@/components/page/域外跨境/secondIndex.vue"
 import ywkjFourthIndex from "@/components/page/域外跨境/fourthIndex.vue"
 
+import nglxyIndex from "@/components/page/宁工理学院/index.vue"
+import nglxyThirdIndex from "@/components/page/宁工理学院/thirdIndex.vue"
+import nglxySecondIndex from "@/components/page/宁工理学院/secondIndex.vue"
+import nglxyFourthIndex from "@/components/page/宁工理学院/fourthIndex.vue"
+
+import swsIndex from "@/components/page/硕为思/index.vue"
+import swsThirdIndex from "@/components/page/硕为思/thirdIndex.vue"
+import swsSecondIndex from "@/components/page/硕为思/secondIndex.vue"
+import swsFourthIndex from "@/components/page/硕为思/fourthIndex.vue"
+
+import xyIndex from "@/components/page/心研医疗/index.vue"
+import xyThirdIndex from "@/components/page/心研医疗/thirdIndex.vue"
+import xySecondIndex from "@/components/page/心研医疗/secondIndex.vue"
+import xyFourthIndex from "@/components/page/心研医疗/fourthIndex.vue"
+
+import jrgjIndex from "@/components/page/巨润国际/index.vue"
+import jrgjThirdIndex from "@/components/page/巨润国际/thirdIndex.vue"
+import jrgjSecondIndex from "@/components/page/巨润国际/secondIndex.vue"
+import jrgjFourthIndex from "@/components/page/巨润国际/fourthIndex.vue"
+
 export default{
   wx584bf9e6868bba55:{
     0:yxPage,
@@ -152,6 +172,29 @@ export default{
     1:ywkjThirdIndex,
     2:ywkjSecondIndex,
     3:ywkjFourthIndex,
-
-  }
+  },
+  宁工理学院:{
+    0:nglxyIndex,
+    1:nglxyThirdIndex,
+    2:nglxySecondIndex,
+    3:nglxyFourthIndex,
+  },
+  硕为思:{
+    0:swsIndex,
+    1:swsThirdIndex,
+    2:swsSecondIndex,
+    3:swsFourthIndex,
+  },
+  心研医疗:{
+    0:xyIndex,
+    1:xyThirdIndex,
+    2:xySecondIndex,
+    3:xyFourthIndex,
+  },
+  巨润国际:{
+    0:jrgjIndex,
+    1:jrgjThirdIndex,
+    2:jrgjSecondIndex,
+    3:jrgjFourthIndex,
+  },
 }
