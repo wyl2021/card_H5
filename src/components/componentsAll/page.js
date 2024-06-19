@@ -34,6 +34,7 @@ import nbkdIndex from "@/components/page/宁波开放大学/index.vue"
 import nbkdThirdIndex from "@/components/page/宁波开放大学/thirdIndex.vue"
 import nbkdSecondIndex from "@/components/page/宁波开放大学/secondIndex.vue"
 import nbkdFourthIndex from "@/components/page/宁波开放大学/fourthIndex.vue"
+import contentInfo from "@/components/page/宁波开放大学/contentInfo.vue"
 
 import nkIndex from "@/components/page/纽酷物流/index.vue"
 import nkThirdIndex from "@/components/page/纽酷物流/thirdIndex.vue"
@@ -134,6 +135,7 @@ export default{
     1:nbkdThirdIndex,
     2:nbkdSecondIndex,
     3:nbkdFourthIndex,
+    info:contentInfo
   },
   纽酷物流:{
     0:nkIndex,
