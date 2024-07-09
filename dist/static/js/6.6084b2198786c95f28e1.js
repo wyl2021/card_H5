@@ -1,2 +1,0 @@
-webpackJsonp([6],{"1CMK":function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n={components:{TXMap:a("woAu").a},methods:{}},r={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",[t("TXMap",{attrs:{mapWidth:"100vh",mapHeight:"100vh",address:this.$route.query.address,name:this.$route.query.name,isTap:Boolean(this.$route.query.isTap)}})],1)},staticRenderFns:[]};var s=a("VU/8")(n,r,!1,function(e){a("ulag")},null,null);t.default=s.exports},ulag:function(e,t){}});
-//# sourceMappingURL=6.6084b2198786c95f28e1.js.map

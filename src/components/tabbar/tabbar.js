@@ -471,11 +471,292 @@ export default {
           activeIcon: "jrgj/tabIcon/fw.png",
           inactiveIcon: "jrgj/tabIcon/fw2.png",
         },
+        // {
+        //   text: "探索",
+        //   activeIcon: "jrgj/tabIcon/ts.png",
+        //   inactiveIcon: "jrgj/tabIcon/ts2.png",
+        // },
+
+      ]
+    }),
+    叮当智能:tabIcon.getBox({
+      activeColor: "#193980",
+      inactiveColor: "#666666",
+      list: [
         {
-          text: "探索",
-          activeIcon: "jrgj/tabIcon/ts.png",
-          inactiveIcon: "jrgj/tabIcon/ts2.png",
+          text: "名片",
+          activeIcon: "ddzn/tabIcon/mp.png",
+          inactiveIcon: "ddzn/tabIcon/mp2.png",
         },
+
+        {
+          text: "资讯",
+          activeIcon: "ddzn/tabIcon/zx.png",
+          inactiveIcon: "ddzn/tabIcon/zx2.png",
+        },
+        {
+          text: "服务",
+          activeIcon: "ddzn/tabIcon/fw.png",
+          inactiveIcon: "ddzn/tabIcon/fw2.png",
+        },
+        {
+          text: "我们",
+          activeIcon: "ddzn/tabIcon/wm.png",
+          inactiveIcon: "ddzn/tabIcon/wm2.png",
+        },
+
+      ]
+    }),
+    德宁安达:tabIcon.getBox({
+      activeColor: "#04509E",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "dnad/tabIcon/mp.png",
+          inactiveIcon: "dnad/tabIcon/mp2.png",
+        },
+
+        {
+          text: "动态",
+          activeIcon: "dnad/tabIcon/dt.png",
+          inactiveIcon: "dnad/tabIcon/dt2.png",
+        },
+        {
+          text: "产品",
+          activeIcon: "dnad/tabIcon/cp.png",
+          inactiveIcon: "dnad/tabIcon/cp2.png",
+        },
+        // {
+        //   text: "探索",
+        //   activeIcon: "dnad/tabIcon/ts.png",
+        //   inactiveIcon: "dnad/tabIcon/ts2.png",
+        // },
+
+      ]
+    }),
+    晨龙锯床:tabIcon.getBox({
+      activeColor: "#D80916",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "cljc/tabIcon/mp.png",
+          inactiveIcon: "cljc/tabIcon/mp2.png",
+        },
+
+        {
+          text: "资讯",
+          activeIcon: "cljc/tabIcon/zx.png",
+          inactiveIcon: "cljc/tabIcon/zx2.png",
+        },
+        {
+          text: "产品",
+          activeIcon: "cljc/tabIcon/cp.png",
+          inactiveIcon: "cljc/tabIcon/cp2.png",
+        },
+        // {
+        //   text: "探索",
+        //   activeIcon: "cljc/tabIcon/ts.png",
+        //   inactiveIcon: "cljc/tabIcon/ts2.png",
+        // },
+
+      ]
+    }),
+    建航国际:tabIcon.getBox({
+      activeColor: "#1CB7D8",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "首页",
+          activeIcon: "jhgj/tabIcon/sy.png",
+          inactiveIcon: "jhgj/tabIcon/sy2.png",
+        },
+
+        {
+          text: "物流",
+          activeIcon: "jhgj/tabIcon/wl.png",
+          inactiveIcon: "jhgj/tabIcon/wl2.png",
+        },
+        {
+          text: "联系",
+          activeIcon: "jhgj/tabIcon/lx.png",
+          inactiveIcon: "jhgj/tabIcon/lx2.png",
+        },
+        // {
+        //   text: "探索",
+        //   activeIcon: "cljc/tabIcon/ts.png",
+        //   inactiveIcon: "cljc/tabIcon/ts2.png",
+        // },
+
+      ]
+    }),
+    雄鹰科菲帝:tabIcon.getBox({
+      activeColor: "#F44D00",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "xykfd/tabIcon/mp.png",
+          inactiveIcon: "xykfd/tabIcon/mp2.png",
+        },
+
+        {
+          text: "介绍",
+          activeIcon: "xykfd/tabIcon/js.png",
+          inactiveIcon: "xykfd/tabIcon/js2.png",
+        },
+        {
+          text: "产品",
+          activeIcon: "xykfd/tabIcon/cp.png",
+          inactiveIcon: "xykfd/tabIcon/cp2.png",
+        },
+        // {
+        //   text: "探索",
+        //   activeIcon: "xykfd/tabIcon/ts.png",
+        //   inactiveIcon: "xykfd/tabIcon/ts2.png",
+        // },
+
+      ]
+    }),
+    包头装备:tabIcon.getBox({
+      activeColor: "#025EA7",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "首页",
+          activeIcon: "btzb/tabIcon/sy.png",
+          inactiveIcon: "btzb/tabIcon/sy2.png",
+        },
+
+        {
+          text: "投资",
+          activeIcon: "btzb/tabIcon/tz.png",
+          inactiveIcon: "btzb/tabIcon/tz2.png",
+        },
+        {
+          text: "招商",
+          activeIcon: "btzb/tabIcon/zs.png",
+          inactiveIcon: "btzb/tabIcon/zs2.png",
+        },
+        // {
+        //   text: "探索",
+        //   activeIcon: "btzb/tabIcon/ts.png",
+        //   inactiveIcon: "btzb/tabIcon/ts2.png",
+        // },
+
+      ]
+    }),
+    皓鹏国际:tabIcon.getBox({
+      activeColor: "#6B4092",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "首页",
+          activeIcon: "hpgj/tabIcon/sy.png",
+          inactiveIcon: "hpgj/tabIcon/sy2.png",
+        },
+
+        {
+          text: "产品",
+          activeIcon: "hpgj/tabIcon/cp.png",
+          inactiveIcon: "hpgj/tabIcon/cp2.png",
+        },
+        {
+          text: "方案",
+          activeIcon: "hpgj/tabIcon/fa.png",
+          inactiveIcon: "hpgj/tabIcon/fa2.png",
+        },
+        // {
+        //   text: "探索",
+        //   activeIcon: "btzb/tabIcon/ts.png",
+        //   inactiveIcon: "btzb/tabIcon/ts2.png",
+        // },
+
+      ]
+    }),
+    //
+    欧利国际:tabIcon.getBox({
+      activeColor: "#077975",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "首页",
+          activeIcon: "olgj/tabIcon/sy.png",
+          inactiveIcon: "olgj/tabIcon/sy2.png",
+        },
+
+        {
+          text: "业务",
+          activeIcon: "olgj/tabIcon/yw.png",
+          inactiveIcon: "olgj/tabIcon/yw2.png",
+        },
+        {
+          text: "主营",
+          activeIcon: "olgj/tabIcon/zy.png",
+          inactiveIcon: "olgj/tabIcon/zy2.png",
+        },
+        // {
+        //   text: "探索",
+        //   activeIcon: "btzb/tabIcon/ts.png",
+        //   inactiveIcon: "btzb/tabIcon/ts2.png",
+        // },
+
+      ]
+    }),
+  小水牛科技:tabIcon.getBox({
+      activeColor: "#DA9C17",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "首页",
+          activeIcon: "xsnkj/tabIcon/sy.png",
+          inactiveIcon: "xsnkj/tabIcon/sy2.png",
+        },
+
+        {
+          text: "方案",
+          activeIcon: "xsnkj/tabIcon/fa.png",
+          inactiveIcon: "xsnkj/tabIcon/fa2.png",
+        },
+        {
+          text: "应用",
+          activeIcon: "xsnkj/tabIcon/yy.png",
+          inactiveIcon: "xsnkj/tabIcon/yy2.png",
+        },
+        // {
+        //   text: "全景",
+        //   activeIcon: "xsnkj/tabIcon/qj.png",
+        //   inactiveIcon: "xsnkj/tabIcon/qj2.png",
+        // },
+
+      ]
+    }),
+    滁州职业:tabIcon.getBox({
+      activeColor: "#0F4931",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "首页",
+          activeIcon: "czzy/tabIcon/sy.png",
+          inactiveIcon: "czzy/tabIcon/sy2.png",
+        },
+
+        {
+          text: "教学",
+          activeIcon: "czzy/tabIcon/jx.png",
+          inactiveIcon: "czzy/tabIcon/jx2.png",
+        },
+        {
+          text: "招生",
+          activeIcon: "czzy/tabIcon/zs.png",
+          inactiveIcon: "czzy/tabIcon/zs2.png",
+        },
+        // {
+        //   text: "全景",
+        //   activeIcon: "czzy/tabIcon/qj.png",
+        //   inactiveIcon: "czzy/tabIcon/qj2.png",
+        // },
 
       ]
     }),

@@ -88,6 +88,61 @@ import jrgjIndex from "@/components/page/巨润国际/index.vue"
 import jrgjThirdIndex from "@/components/page/巨润国际/thirdIndex.vue"
 import jrgjSecondIndex from "@/components/page/巨润国际/secondIndex.vue"
 import jrgjFourthIndex from "@/components/page/巨润国际/fourthIndex.vue"
+import jrgjContentInfo from "@/components/page/巨润国际/contentInfo.vue"
+
+import ddznIndex from "@/components/page/叮当智能/index.vue"
+import ddznThirdIndex from "@/components/page/叮当智能/thirdIndex.vue"
+import ddznSecondIndex from "@/components/page/叮当智能/secondIndex.vue"
+import ddznFourthIndex from "@/components/page/叮当智能/fourthIndex.vue"
+
+import dnadIndex from "@/components/page/德宁安达/index.vue"
+import dnadThirdIndex from "@/components/page/德宁安达/thirdIndex.vue"
+import dnadSecondIndex from "@/components/page/德宁安达/secondIndex.vue"
+import dnadFourthIndex from "@/components/page/德宁安达/fourthIndex.vue"
+import dnadContentInfo from "@/components/page/德宁安达/contentInfo.vue"
+
+import cljcIndex from "@/components/page/晨龙锯床/index.vue"
+import cljcThirdIndex from "@/components/page/晨龙锯床/thirdIndex.vue"
+import cljcSecondIndex from "@/components/page/晨龙锯床/secondIndex.vue"
+import cljcFourthIndex from "@/components/page/晨龙锯床/fourthIndex.vue"
+import cljcContentInfo from "@/components/page/晨龙锯床/contentInfo.vue"
+
+import jhgjIndex from "@/components/page/建航国际/index.vue"
+import jhgjThirdIndex from "@/components/page/建航国际/thirdIndex.vue"
+import jhgjSecondIndex from "@/components/page/建航国际/secondIndex.vue"
+import jhgjFourthIndex from "@/components/page/建航国际/fourthIndex.vue"
+
+import xykfdIndex from "@/components/page/雄鹰科菲帝/index.vue"
+import xykfdThirdIndex from "@/components/page/雄鹰科菲帝/thirdIndex.vue"
+import xykfdSecondIndex from "@/components/page/雄鹰科菲帝/secondIndex.vue"
+import xykfdFourthIndex from "@/components/page/雄鹰科菲帝/fourthIndex.vue"
+
+import btzbIndex from "@/components/page/包头装备/index.vue"
+import btzbThirdIndex from "@/components/page/包头装备/thirdIndex.vue"
+import btzbSecondIndex from "@/components/page/包头装备/secondIndex.vue"
+import btzbFourthIndex from "@/components/page/包头装备/fourthIndex.vue"
+
+import hpgjIndex from "@/components/page/皓鹏国际/index.vue"
+import hpgjThirdIndex from "@/components/page/皓鹏国际/thirdIndex.vue"
+import hpgjSecondIndex from "@/components/page/皓鹏国际/secondIndex.vue"
+import hpgjFourthIndex from "@/components/page/皓鹏国际/fourthIndex.vue"
+
+import olgjIndex from "@/components/page/欧利国际/index.vue"
+import olgjThirdIndex from "@/components/page/欧利国际/thirdIndex.vue"
+import olgjSecondIndex from "@/components/page/欧利国际/secondIndex.vue"
+import olgjFourthIndex from "@/components/page/欧利国际/fourthIndex.vue"
+
+import xsnkjIndex from "@/components/page/小水牛科技/index.vue"
+import xsnkjThirdIndex from "@/components/page/小水牛科技/thirdIndex.vue"
+import xsnkjSecondIndex from "@/components/page/小水牛科技/secondIndex.vue"
+import xsnkjFourthIndex from "@/components/page/小水牛科技/fourthIndex.vue"
+import xsnkjContentInfo from "@/components/page/小水牛科技/contentInfo.vue"
+
+import czzyIndex from "@/components/page/滁州职业/index.vue"
+import czzyThirdIndex from "@/components/page/滁州职业/thirdIndex.vue"
+import czzySecondIndex from "@/components/page/滁州职业/secondIndex.vue"
+import czzyFourthIndex from "@/components/page/滁州职业/fourthIndex.vue"
+
 
 export default{
   wx584bf9e6868bba55:{
@@ -198,5 +253,63 @@ export default{
     1:jrgjThirdIndex,
     2:jrgjSecondIndex,
     3:jrgjFourthIndex,
+    info:jrgjContentInfo,
+  },
+  叮当智能:{
+    0:ddznIndex,
+    1:ddznThirdIndex,
+    2:ddznSecondIndex,
+    3:ddznFourthIndex,
+  },
+  德宁安达:{
+    0:dnadIndex,
+    1:dnadThirdIndex,
+    2:dnadSecondIndex,
+    3:dnadFourthIndex,
+    info:dnadContentInfo,
+  },
+  晨龙锯床:{
+    0:cljcIndex,
+    1:cljcThirdIndex,
+    2:cljcSecondIndex,
+    3:cljcFourthIndex,
+    info:cljcContentInfo,
+  },
+  建航国际:{
+    0:jhgjIndex,
+    1:jhgjThirdIndex,
+    2:jhgjSecondIndex,
+    3:jhgjFourthIndex,
+  },
+  雄鹰科菲帝:{
+    0:xykfdIndex,
+    1:xykfdThirdIndex,
+    2:xykfdSecondIndex,
+    3:xykfdFourthIndex,
+  },
+  包头装备:{
+    0:btzbIndex,
+    1:btzbThirdIndex,
+    2:btzbSecondIndex,
+    3:btzbFourthIndex,
+  },
+  欧利国际:{
+    0:olgjIndex,
+    1:olgjThirdIndex,
+    2:olgjSecondIndex,
+    3:olgjFourthIndex,
+  },
+  小水牛科技:{
+    0:xsnkjIndex,
+    1:xsnkjThirdIndex,
+    2:xsnkjSecondIndex,
+    3:xsnkjFourthIndex,
+    info:xsnkjContentInfo
+  },
+  滁州职业:{
+    0:czzyIndex,
+    1:czzyThirdIndex,
+    2:czzySecondIndex,
+    3:czzyFourthIndex,
   },
 }

@@ -24,6 +24,7 @@ import nameList from "@/components/tool/nameList.vue"
 import ywkjContent from "@/components/content/ywkjContent.vue"
 import swsContent from "@/components/content/swsContent.vue"
 import xyylContent from "@/components/content/xyylContent.vue"
+import ddznContent from "@/components/content/ddznContent.vue"
 
 import yxPage from "../page/yx/yxPage.vue"
 import yxthirdIndex from "../page/yx/yxthirdIndex.vue"
@@ -63,6 +64,7 @@ Vue.component('nameList',nameList)
 Vue.component('ywkjContent',ywkjContent)
 Vue.component('swsContent',swsContent)
 Vue.component('xyylContent',xyylContent)
+Vue.component('ddznContent',ddznContent)
 
 Vue.component('mxtIndex',mxtIndex)
 Vue.component('mxtThirdIndex',mxtThirdIndex)
