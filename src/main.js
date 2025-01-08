@@ -8,7 +8,8 @@ import store from './store/index.js';
 import VueDPlayer from "vue-dplayer";
 import ElementUI from 'element-ui';
 import SvgIcon from '@/components/SvgIcon/index.vue';// svg component
-import http from '@/api/http'
+import http from '@/api/http';
+import axios from 'axios';
 import 'vant/lib/index.css';
 import 'amfe-flexible';
 import 'element-ui/lib/theme-chalk/index.css';
@@ -27,6 +28,7 @@ Vue.component('svg-icon', SvgIcon)
 Vue.prototype.IMG = 'https://card-img1.oss-cn-beijing.aliyuncs.com/'
 const req = require.context('./assets/svg', false, /\.svg$/)
 
+Vue.config.productionTip = false
 const requireAll = requireContext => requireContext.keys().map(requireContext)
 requireAll(req)
 Vue.use(Dialog);
@@ -37,6 +39,7 @@ Vue.use(VueDPlayer);
 Vue.config.productionTip = false
 Vue.prototype.$store = store
 Vue.prototype.$http = http
+
 
 /* eslint-disable no-new */
 new Vue({

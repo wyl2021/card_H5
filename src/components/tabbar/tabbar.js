@@ -471,11 +471,16 @@ export default {
           activeIcon: "jrgj/tabIcon/fw.png",
           inactiveIcon: "jrgj/tabIcon/fw2.png",
         },
-        // {
-        //   text: "探索",
-        //   activeIcon: "jrgj/tabIcon/ts.png",
-        //   inactiveIcon: "jrgj/tabIcon/ts2.png",
-        // },
+        {
+          text: "运单",
+          activeIcon: "jrgj/tabIcon/yd.png",
+          inactiveIcon: "jrgj/tabIcon/yd2.png",
+        },
+        {
+          text: "探索",
+          activeIcon: "jrgj/tabIcon/ts.png",
+          inactiveIcon: "jrgj/tabIcon/ts2.png",
+        },
 
       ]
     }),
@@ -757,6 +762,211 @@ export default {
         //   activeIcon: "czzy/tabIcon/qj.png",
         //   inactiveIcon: "czzy/tabIcon/qj2.png",
         // },
+
+      ]
+    }),
+    滁州机械:tabIcon.getBox({
+      activeColor: "#316895",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "首页",
+          activeIcon: "czjx/tabIcon/sy.png",
+          inactiveIcon: "czjx/tabIcon/sy2.png",
+        },
+
+        {
+          text: "专业",
+          activeIcon: "czjx/tabIcon/zy.png",
+          inactiveIcon: "czjx/tabIcon/zy2.png",
+        },
+        {
+          text: "招生",
+          activeIcon: "czjx/tabIcon/zs.png",
+          inactiveIcon: "czjx/tabIcon/zs2.png",
+        },
+        // {
+        //   text: "探索",
+        //   activeIcon: "czjx/tabIcon/ts.png",
+        //   inactiveIcon: "czjx/tabIcon/ts2.png",
+        // },
+
+      ]
+    }),
+    海铁物流:tabIcon.getBox({
+      activeColor: "#3598DC",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "首页",
+          activeIcon: "htwl/tabIcon/sy.png",
+          inactiveIcon: "htwl/tabIcon/sy2.png",
+        },
+
+        {
+          text: "业务",
+          activeIcon: "htwl/tabIcon/yw.png",
+          inactiveIcon: "htwl/tabIcon/yw2.png",
+        },
+        {
+          text: "工具 ",
+          activeIcon: "htwl/tabIcon/gj.png",
+          inactiveIcon: "htwl/tabIcon/gj2.png",
+        },
+        // {
+        //   text: "探索",
+        //   activeIcon: "htwl/tabIcon/ts.png",
+        //   inactiveIcon: "htwl/tabIcon/ts2.png",
+        // },
+
+      ]
+    }),
+    科钛:tabIcon.getBox({
+      activeColor: "#BE1A21",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "首页",
+          activeIcon: "kt/tabIcon/sy.png",
+          inactiveIcon: "kt/tabIcon/sy2.png",
+        },
+
+        {
+          text: "产品",
+          activeIcon: "kt/tabIcon/cp.png",
+          inactiveIcon: "kt/tabIcon/cp2.png",
+        },
+        {
+          text: "案例",
+          activeIcon: "kt/tabIcon/al.png",
+          inactiveIcon: "kt/tabIcon/al2.png",
+        },
+        // {
+        //   text: "探索",
+        //   activeIcon: "kt/tabIcon/ts.png",
+        //   inactiveIcon: "kt/tabIcon/ts2.png",
+        // },
+
+      ]
+    }),
+    精伟精密:tabIcon.getBox({
+      activeColor: "#FF0000",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "首页",
+          activeIcon: "jwjm/tabIcon/sy.png",
+          inactiveIcon: "jwjm/tabIcon/sy2.png",
+        },
+
+        {
+          text: "产品",
+          activeIcon: "jwjm/tabIcon/cp.png",
+          inactiveIcon: "jwjm/tabIcon/cp2.png",
+        },
+        {
+          text: "应用",
+          activeIcon: "jwjm/tabIcon/yy.png",
+          inactiveIcon: "jwjm/tabIcon/yy2.png",
+        },
+        // {
+        //   text: "全景",
+        //   activeIcon: "jwjm/tabIcon/qj.png",
+        //   inactiveIcon: "jwjm/tabIcon/qj2.png",
+        // },
+
+      ]
+    }),
+
+    宁波职业:tabIcon.getBox({
+      activeColor: "#1660C6",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "nbzy/tabIcon/mp.png",
+          inactiveIcon: "nbzy/tabIcon/mp2.png",
+        },
+
+        {
+          text: "新闻",
+          activeIcon: "nbzy/tabIcon/xw.png",
+          inactiveIcon: "nbzy/tabIcon/xw2.png",
+        },
+        {
+          text: "招生",
+          activeIcon: "nbzy/tabIcon/zs.png",
+          inactiveIcon: "nbzy/tabIcon/zs2.png",
+        },
+        // {
+        //   text: "探索",
+        //   activeIcon: "nbzy/tabIcon/ts.png",
+        //   inactiveIcon: "nbzy/tabIcon/ts2.png",
+        // },
+
+      ]
+    }),
+
+    京华达:tabIcon.getBox({
+      activeColor: "#FD3B14",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "jhd/tabIcon/mp.png",
+          inactiveIcon: "jhd/tabIcon/mp2.png",
+        },
+
+        {
+          text: "动态",
+          activeIcon: "jhd/tabIcon/dt.png",
+          inactiveIcon: "jhd/tabIcon/dt2.png",
+        },
+        {
+          text: "服务",
+          activeIcon: "jhd/tabIcon/fw.png",
+          inactiveIcon: "jhd/tabIcon/fw2.png",
+        },
+        {
+          text: "运单",
+          activeIcon: "jhd/tabIcon/yd.png",
+          inactiveIcon: "jhd/tabIcon/yd2.png",
+        },
+
+        {
+          text: "探索",
+          activeIcon: "jhd/tabIcon/ts.png",
+          inactiveIcon: "jhd/tabIcon/ts2.png",
+        },
+
+      ]
+    }),
+  恒荣:tabIcon.getBox({
+      activeColor: "#482F7D",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "hr/tabIcon/mp.png",
+          inactiveIcon: "hr/tabIcon/mp2.png",
+        },
+
+        {
+          text: "我们",
+          activeIcon: "hr/tabIcon/wm.png",
+          inactiveIcon: "hr/tabIcon/wm2.png",
+        },
+        {
+          text: "产品",
+          activeIcon: "hr/tabIcon/cp.png",
+          inactiveIcon: "hr/tabIcon/cp2.png",
+        },
+
+        {
+          text: "全景",
+          activeIcon: "hr/tabIcon/qj.png",
+          inactiveIcon: "hr/tabIcon/qj2.png",
+        },
 
       ]
     }),

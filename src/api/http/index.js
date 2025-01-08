@@ -106,7 +106,15 @@ export const login = (data) => {
 		data:data,
 	})
 }
+// 三级类型列表
+export const categoryCategoryTypeList=(data)=>{
 
+	return request({
+		url:'v1/pc/product/categoryType/list',
+		method:'GET',
+		params:data
+	})
+}
 // 三级列表
 export const categorySolutionTypeList=(data)=>{
 
@@ -139,4 +147,5 @@ export default {
 	solutionDetail,
 	categorySolutionTypeList,
 	categorySolutionTypeDetail,
+  categoryCategoryTypeList
 }

@@ -16,6 +16,7 @@ function getNetworkIp() {
         let alias = iface[i];
         if (alias.family === 'IPv4' && alias.address !== '127.0.0.1' && !alias.internal) {
           needHost = alias.address;
+
         }
       }
     }
@@ -47,11 +48,27 @@ module.exports = {
       .end()
   },
   dev: {
-
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/mpapi': {
+        target:'http://ywjrgj.nextsls.com',
+        changeOrigin: true,
+        // ws:true,
+        // pathRewrite: {
+        //   '^/mpapi': ''
+        // },
+        // headers: {
+        //   'Host': 'ywjrgj.nextsls.com',
+        // },
+
+      },
+      '/JhdTraceMsg':{
+        target:'http://in.kwt56.com:8253',///'http://la.kwt56.com:8259',
+        changeOrigin: true,
+      }
+    },
 
     // Various Dev Server settings
     host: getNetworkIp(), // can be overwritten by process.env.HOST
@@ -80,12 +97,24 @@ module.exports = {
   build: {
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
-
+    env: require('./prod.env'), // 使用 config/prod.env.js 中定义的编译环境
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    // proxyTable: {
+    //   '/mpapi': {
+    //     target: 'http://ywjrgj.nextsls.com',
+    //     changeOrigin: true,
+    //     // pathRewrite: {
+    //     //   '^/mpapi': '/'
+    //     // },
+    //     // headers: {
+    //     //   'Host': 'ywjrgj.nextsls.com',
+    //     // },
 
+    //   },
+    // },
     /**
      * Source Maps
      */

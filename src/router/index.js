@@ -76,7 +76,7 @@ const router = new Router({
 
 router.afterEach((to, from) => {
   // if(to.meta.title){
-    console.log(to)
+    // console.log(to)
   document.title = to.query.title || to.meta.title  || '名片'
   // }
   // next()

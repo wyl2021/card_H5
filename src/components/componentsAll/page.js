@@ -88,6 +88,7 @@ import jrgjIndex from "@/components/page/巨润国际/index.vue"
 import jrgjThirdIndex from "@/components/page/巨润国际/thirdIndex.vue"
 import jrgjSecondIndex from "@/components/page/巨润国际/secondIndex.vue"
 import jrgjFourthIndex from "@/components/page/巨润国际/fourthIndex.vue"
+import jrgjFiveIndex from "@/components/page/巨润国际/fiveIndex.vue"
 import jrgjContentInfo from "@/components/page/巨润国际/contentInfo.vue"
 
 import ddznIndex from "@/components/page/叮当智能/index.vue"
@@ -143,7 +144,44 @@ import czzyThirdIndex from "@/components/page/滁州职业/thirdIndex.vue"
 import czzySecondIndex from "@/components/page/滁州职业/secondIndex.vue"
 import czzyFourthIndex from "@/components/page/滁州职业/fourthIndex.vue"
 
+import czjxIndex from "@/components/page/滁州机械/index.vue"
+import czjxThirdIndex from "@/components/page/滁州机械/thirdIndex.vue"
+import czjxSecondIndex from "@/components/page/滁州机械/secondIndex.vue"
+import czjxFourthIndex from "@/components/page/滁州机械/fourthIndex.vue"
 
+import htwlIndex from "@/components/page/海铁物流/index.vue"
+import htwlThirdIndex from "@/components/page/海铁物流/thirdIndex.vue"
+import htwlSecondIndex from "@/components/page/海铁物流/secondIndex.vue"
+import htwlFourthIndex from "@/components/page/海铁物流/fourthIndex.vue"
+
+import ktIndex from "@/components/page/科钛/index.vue"
+import ktThirdIndex from "@/components/page/科钛/thirdIndex.vue"
+import ktSecondIndex from "@/components/page/科钛/secondIndex.vue"
+import ktFourthIndex from "@/components/page/科钛/fourthIndex.vue"
+import ktContentInfo from "@/components/page/科钛/contentInfo.vue"
+
+import jwjmIndex from "@/components/page/精伟精密/index.vue"
+import jwjmThirdIndex from "@/components/page/精伟精密/thirdIndex.vue"
+import jwjmSecondIndex from "@/components/page/精伟精密/secondIndex.vue"
+import jwjmFourthIndex from "@/components/page/精伟精密/fourthIndex.vue"
+
+import nbzyIndex from "@/components/page/宁波职业/index.vue"
+import nbzyThirdIndex from "@/components/page/宁波职业/thirdIndex.vue"
+import nbzySecondIndex from "@/components/page/宁波职业/secondIndex.vue"
+import nbzyFourthIndex from "@/components/page/宁波职业/fourthIndex.vue"
+import nbzyContentInfo from "@/components/page/宁波职业/contentInfo.vue"
+
+import jhdIndex from "@/components/page/京华达/index.vue"
+import jhdThirdIndex from "@/components/page/京华达/thirdIndex.vue"
+import jhdSecondIndex from "@/components/page/京华达/secondIndex.vue"
+import jhdFourthIndex from "@/components/page/京华达/fourthIndex.vue"
+import jhdContentInfo from "@/components/page/京华达/contentInfo.vue"
+import jhdFiveIndex from "@/components/page/京华达/fiveIndex.vue"
+
+import hrIndex from "@/components/page/恒荣/index.vue"
+import hrThirdIndex from "@/components/page/恒荣/thirdIndex.vue"
+import hrSecondIndex from "@/components/page/恒荣/secondIndex.vue"
+import hrFourthIndex from "@/components/page/恒荣/fourthIndex.vue"
 export default{
   wx584bf9e6868bba55:{
     0:yxPage,
@@ -253,6 +291,7 @@ export default{
     1:jrgjThirdIndex,
     2:jrgjSecondIndex,
     3:jrgjFourthIndex,
+    4:jrgjFiveIndex,
     info:jrgjContentInfo,
   },
   叮当智能:{
@@ -312,4 +351,50 @@ export default{
     2:czzySecondIndex,
     3:czzyFourthIndex,
   },
+  滁州机械:{
+    0:czjxIndex,
+    1:czjxThirdIndex,
+    2:czjxSecondIndex,
+    3:czjxFourthIndex,
+  },
+  海铁物流:{
+    0:htwlIndex,
+    1:htwlThirdIndex,
+    2:htwlSecondIndex,
+    3:htwlFourthIndex,
+  },
+  科钛:{
+    0:ktIndex,
+    1:ktThirdIndex,
+    2:ktSecondIndex,
+    3:ktFourthIndex,
+    info:ktContentInfo,
+  },
+  精伟精密:{
+    0:jwjmIndex,
+    1:jwjmThirdIndex,
+    2:jwjmSecondIndex,
+    3:jwjmFourthIndex,
+  },
+  宁波职业:{
+    0:nbzyIndex,
+    1:nbzyThirdIndex,
+    2:nbzySecondIndex,
+    3:nbzyFourthIndex,
+    info:nbzyContentInfo
+  },
+  京华达:{
+    0:jhdIndex,
+    1:jhdThirdIndex,
+    2:jhdSecondIndex,
+    3:jhdFourthIndex,
+    4:jhdFiveIndex,
+    info:jhdContentInfo
+  },
+  恒荣:{
+    0:hrIndex,
+    1:hrThirdIndex,
+    2:hrSecondIndex,
+    3:hrFourthIndex,
+  }
 }
