@@ -1,6 +1,6 @@
 // tabIcon
 // 更具appid判断tabIcon参数
-import  tabIcon  from "./tabbarBox.js"
+import tabIcon from "./tabbarBox.js"
 export default {
   data: {
     wx584bf9e6868bba55: tabIcon.getBox({
@@ -34,7 +34,7 @@ export default {
         },
       ]
     }),
-    美线通供应链:tabIcon.getBox({
+    美线通供应链: tabIcon.getBox({
       activeColor: "#101749",
       inactiveColor: "#666666",
       list: [
@@ -60,7 +60,7 @@ export default {
         }
       ]
     }),
-    宁波工程网安:tabIcon.getBox({
+    宁波工程网安: tabIcon.getBox({
       activeColor: "#D0333A",
       inactiveColor: "#666666",
       list: [
@@ -86,7 +86,7 @@ export default {
         }
       ]
     }),
-    德普凯信:tabIcon.getBox({
+    德普凯信: tabIcon.getBox({
       activeColor: "#6EBB54",
       inactiveColor: "#666666",
       list: [
@@ -117,7 +117,7 @@ export default {
         }
       ]
     }),
-    康宁医院:tabIcon.getBox({
+    康宁医院: tabIcon.getBox({
       activeColor: "#355DA8",
       inactiveColor: "#666666",
       list: [
@@ -144,7 +144,7 @@ export default {
 
       ]
     }),
-    达升物流:tabIcon.getBox({
+    达升物流: tabIcon.getBox({
       activeColor: "#AE2B34",
       inactiveColor: "#666666",
       list: [
@@ -175,7 +175,7 @@ export default {
         },
       ]
     }),
-    宁波开放大学:tabIcon.getBox({
+    宁波开放大学: tabIcon.getBox({
       activeColor: "#A51C30",
       inactiveColor: "#666666",
       list: [
@@ -202,7 +202,7 @@ export default {
 
       ]
     }),
-    纽酷物流:tabIcon.getBox({
+    纽酷物流: tabIcon.getBox({
       activeColor: "#E14805",
       inactiveColor: "#666666",
       list: [
@@ -229,7 +229,7 @@ export default {
 
       ]
     }),
-    中鑫博勒:tabIcon.getBox({
+    中鑫博勒: tabIcon.getBox({
       activeColor: "#113682",
       inactiveColor: "#666666",
       list: [
@@ -256,7 +256,7 @@ export default {
 
       ]
     }),
-    速锋科技:tabIcon.getBox({
+    速锋科技: tabIcon.getBox({
       activeColor: "#0101FE",
       inactiveColor: "#666666",
       list: [
@@ -283,7 +283,7 @@ export default {
 
       ]
     }),
-    精蔚特:tabIcon.getBox({
+    精蔚特: tabIcon.getBox({
       activeColor: "#E90000",
       inactiveColor: "#666666",
       list: [
@@ -311,7 +311,7 @@ export default {
 
       ]
     }),
-    海洛泵业:tabIcon.getBox({
+    海洛泵业: tabIcon.getBox({
       activeColor: "#155499",
       inactiveColor: "#666666",
       list: [
@@ -339,7 +339,7 @@ export default {
 
       ]
     }),
-    域外跨境:tabIcon.getBox({
+    域外跨境: tabIcon.getBox({
       activeColor: "#25607E",
       inactiveColor: "#666666",
       list: [
@@ -367,7 +367,7 @@ export default {
 
       ]
     }),
-    宁工理学院:tabIcon.getBox({
+    宁工理学院: tabIcon.getBox({
       activeColor: "#004098",
       inactiveColor: "#666666",
       list: [
@@ -395,7 +395,7 @@ export default {
 
       ]
     }),
-    硕为思:tabIcon.getBox({
+    硕为思: tabIcon.getBox({
       activeColor: "#EB6027",
       inactiveColor: "#666666",
       list: [
@@ -423,7 +423,7 @@ export default {
 
       ]
     }),
-    心研医疗:tabIcon.getBox({
+    心研医疗: tabIcon.getBox({
       activeColor: "#D62223",
       inactiveColor: "#666666",
       list: [
@@ -451,7 +451,7 @@ export default {
 
       ]
     }),
-    巨润国际:tabIcon.getBox({
+    巨润国际: tabIcon.getBox({
       activeColor: "#024190",
       inactiveColor: "#666666",
       list: [
@@ -484,7 +484,7 @@ export default {
 
       ]
     }),
-    叮当智能:tabIcon.getBox({
+    叮当智能: tabIcon.getBox({
       activeColor: "#193980",
       inactiveColor: "#666666",
       list: [
@@ -512,7 +512,7 @@ export default {
 
       ]
     }),
-    德宁安达:tabIcon.getBox({
+    德宁安达: tabIcon.getBox({
       activeColor: "#04509E",
       inactiveColor: "#666666",
       list: [
@@ -540,7 +540,7 @@ export default {
 
       ]
     }),
-    晨龙锯床:tabIcon.getBox({
+    晨龙锯床: tabIcon.getBox({
       activeColor: "#D80916",
       inactiveColor: "#666666",
       list: [
@@ -568,7 +568,7 @@ export default {
 
       ]
     }),
-    建航国际:tabIcon.getBox({
+    建航国际: tabIcon.getBox({
       activeColor: "#1CB7D8",
       inactiveColor: "#666666",
       list: [
@@ -596,7 +596,7 @@ export default {
 
       ]
     }),
-    雄鹰科菲帝:tabIcon.getBox({
+    雄鹰科菲帝: tabIcon.getBox({
       activeColor: "#F44D00",
       inactiveColor: "#666666",
       list: [
@@ -624,7 +624,7 @@ export default {
 
       ]
     }),
-    包头装备:tabIcon.getBox({
+    包头装备: tabIcon.getBox({
       activeColor: "#025EA7",
       inactiveColor: "#666666",
       list: [
@@ -652,7 +652,7 @@ export default {
 
       ]
     }),
-    皓鹏国际:tabIcon.getBox({
+    皓鹏国际: tabIcon.getBox({
       activeColor: "#6B4092",
       inactiveColor: "#666666",
       list: [
@@ -681,7 +681,7 @@ export default {
       ]
     }),
     //
-    欧利国际:tabIcon.getBox({
+    欧利国际: tabIcon.getBox({
       activeColor: "#077975",
       inactiveColor: "#666666",
       list: [
@@ -709,7 +709,7 @@ export default {
 
       ]
     }),
-  小水牛科技:tabIcon.getBox({
+    小水牛科技: tabIcon.getBox({
       activeColor: "#DA9C17",
       inactiveColor: "#666666",
       list: [
@@ -737,7 +737,7 @@ export default {
 
       ]
     }),
-    滁州职业:tabIcon.getBox({
+    滁州职业: tabIcon.getBox({
       activeColor: "#0F4931",
       inactiveColor: "#666666",
       list: [
@@ -765,7 +765,7 @@ export default {
 
       ]
     }),
-    滁州机械:tabIcon.getBox({
+    滁州机械: tabIcon.getBox({
       activeColor: "#316895",
       inactiveColor: "#666666",
       list: [
@@ -793,7 +793,7 @@ export default {
 
       ]
     }),
-    海铁物流:tabIcon.getBox({
+    海铁物流: tabIcon.getBox({
       activeColor: "#3598DC",
       inactiveColor: "#666666",
       list: [
@@ -821,7 +821,7 @@ export default {
 
       ]
     }),
-    科钛:tabIcon.getBox({
+    科钛: tabIcon.getBox({
       activeColor: "#BE1A21",
       inactiveColor: "#666666",
       list: [
@@ -849,7 +849,7 @@ export default {
 
       ]
     }),
-    精伟精密:tabIcon.getBox({
+    精伟精密: tabIcon.getBox({
       activeColor: "#FF0000",
       inactiveColor: "#666666",
       list: [
@@ -878,7 +878,7 @@ export default {
       ]
     }),
 
-    宁波职业:tabIcon.getBox({
+    宁波职业: tabIcon.getBox({
       activeColor: "#1660C6",
       inactiveColor: "#666666",
       list: [
@@ -907,7 +907,7 @@ export default {
       ]
     }),
 
-    京华达:tabIcon.getBox({
+    京华达: tabIcon.getBox({
       activeColor: "#FD3B14",
       inactiveColor: "#666666",
       list: [
@@ -941,7 +941,7 @@ export default {
 
       ]
     }),
-  恒荣:tabIcon.getBox({
+    恒荣: tabIcon.getBox({
       activeColor: "#482F7D",
       inactiveColor: "#666666",
       list: [
@@ -966,6 +966,68 @@ export default {
           text: "全景",
           activeIcon: "hr/tabIcon/qj.png",
           inactiveIcon: "hr/tabIcon/qj2.png",
+        },
+
+      ]
+    }),
+    易通: tabIcon.getBox({
+      activeColor: "#004097",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "yt/tabIcon/mp.png",
+          inactiveIcon: "yt/tabIcon/mp2.png",
+        },
+
+        {
+          text: "新闻",
+          activeIcon: "yt/tabIcon/xw.png",
+          inactiveIcon: "yt/tabIcon/xw2.png",
+        },
+        {
+          text: "业务",
+          activeIcon: "yt/tabIcon/yw.png",
+          inactiveIcon: "yt/tabIcon/yw2.png",
+        },
+        {
+          text: "案例",
+          activeIcon: "yt/tabIcon/al.png",
+          inactiveIcon: "yt/tabIcon/al2.png",
+        },
+        // {
+        //   text: "全景",
+        //   activeIcon: "yt/tabIcon/qj.png",
+        //   inactiveIcon: "yt/tabIcon/qj2.png",
+        // },
+
+      ]
+    }),
+    申诺伟: tabIcon.getBox({
+      activeColor: "#004097",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "snw/tabIcon/mp.png",
+          inactiveIcon: "snw/tabIcon/mp2.png",
+        },
+
+
+        {
+          text: "业务",
+          activeIcon: "snw/tabIcon/yw.png",
+          inactiveIcon: "snw/tabIcon/yw2.png",
+        },
+        {
+          text: "系统",
+          activeIcon: "snw/tabIcon/al.png",
+          inactiveIcon: "snw/tabIcon/al2.png",
+        },
+        {
+          text: "探索",
+          activeIcon: "snw/tabIcon/ts.png",
+          inactiveIcon: "snw/tabIcon/ts2.png",
         },
 
       ]

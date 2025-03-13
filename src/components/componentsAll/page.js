@@ -182,6 +182,20 @@ import hrIndex from "@/components/page/恒荣/index.vue"
 import hrThirdIndex from "@/components/page/恒荣/thirdIndex.vue"
 import hrSecondIndex from "@/components/page/恒荣/secondIndex.vue"
 import hrFourthIndex from "@/components/page/恒荣/fourthIndex.vue"
+
+import ytIndex from "@/components/page/易通/index.vue"
+import ytThirdIndex from "@/components/page/易通/thirdIndex.vue"
+import ytSecondIndex from "@/components/page/易通/secondIndex.vue"
+import ytFourthIndex from "@/components/page/易通/fourthIndex.vue"
+import ytContentInfo from "@/components/page/易通/contentInfo.vue"
+import ytFiveIndex from "@/components/page/易通/fiveIndex.vue"
+
+import snwIndex from "@/components/page/申诺伟/index.vue"
+import snwThirdIndex from "@/components/page/申诺伟/thirdIndex.vue"
+import snwSecondIndex from "@/components/page/申诺伟/secondIndex.vue"
+import snwFourthIndex from "@/components/page/申诺伟/fourthIndex.vue"
+import snwContentInfo from "@/components/page/申诺伟/contentInfo.vue"
+
 export default{
   wx584bf9e6868bba55:{
     0:yxPage,
@@ -396,5 +410,20 @@ export default{
     1:hrThirdIndex,
     2:hrSecondIndex,
     3:hrFourthIndex,
+  },
+  易通:{
+    0:ytIndex,
+    1:ytThirdIndex,
+    2:ytSecondIndex,
+    3:ytFourthIndex,
+    4:ytFiveIndex,
+    info:ytContentInfo
+  },
+  申诺伟:{
+    0:snwIndex,
+    1:snwThirdIndex,
+    2:snwSecondIndex,
+    3:snwFourthIndex,
+    info:snwContentInfo
   }
 }
