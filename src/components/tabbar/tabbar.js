@@ -995,11 +995,11 @@ export default {
           activeIcon: "yt/tabIcon/al.png",
           inactiveIcon: "yt/tabIcon/al2.png",
         },
-        // {
-        //   text: "全景",
-        //   activeIcon: "yt/tabIcon/qj.png",
-        //   inactiveIcon: "yt/tabIcon/qj2.png",
-        // },
+        {
+          text: "全景",
+          activeIcon: "yt/tabIcon/qj.png",
+          inactiveIcon: "yt/tabIcon/qj2.png",
+        },
 
       ]
     }),
