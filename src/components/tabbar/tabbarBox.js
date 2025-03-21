@@ -18,7 +18,7 @@ export default {
     return res
   },
   getBox(list) {
-      console.log()
+
     return {
       activeColor: list.activeColor,
       inactiveColor: list.inactiveColor,

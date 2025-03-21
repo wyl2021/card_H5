@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import tabbar from "../components/tabbar/tabbar"
 Vue.use(Router)
-console.log("router",localStorage.getItem("id"))
+
 // const tabTitle =tabbar.data[`${localStorage.getItem("id")}`]
 // console.log(tabTitle)
 const router = new Router({
