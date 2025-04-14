@@ -26,7 +26,11 @@ import swsContent from "@/components/content/swsContent.vue"
 import xyylContent from "@/components/content/xyylContent.vue"
 import ddznContent from "@/components/content/ddznContent.vue"
 import ytContent from "@/components/content/ytContent.vue"
+import ybxContent from "@/components/content/ybxContent.vue"
+import dacMusic from "@/components/content/dacMusic.vue"
 import popup from "@/components/tool/popup.vue"
+
+
 
 import yxPage from "../page/yx/yxPage.vue"
 import yxthirdIndex from "../page/yx/yxthirdIndex.vue"
@@ -68,6 +72,8 @@ Vue.component('swsContent',swsContent)
 Vue.component('xyylContent',xyylContent)
 Vue.component('ddznContent',ddznContent)
 Vue.component('ytContent',ytContent)
+Vue.component('ybxContent',ybxContent)
+Vue.component('dacMusic',dacMusic)
 Vue.component('popup',popup)
 
 Vue.component('mxtIndex',mxtIndex)

@@ -196,6 +196,18 @@ import snwSecondIndex from "@/components/page/申诺伟/secondIndex.vue"
 import snwFourthIndex from "@/components/page/申诺伟/fourthIndex.vue"
 import snwContentInfo from "@/components/page/申诺伟/contentInfo.vue"
 
+
+import ybxIndex from "@/components/page/易宝星/index.vue"
+import ybxThirdIndex from "@/components/page/易宝星/thirdIndex.vue"
+import ybxSecondIndex from "@/components/page/易宝星/secondIndex.vue"
+// import snwFourthIndex from "@/components/page/申诺伟/fourthIndex.vue"
+import ybxContentInfo from "@/components/page/易宝星/contentInfo.vue"
+
+import dacIndex from "@/components/page/墩岙村/index.vue"
+import dacThirdIndex from "@/components/page/墩岙村/thirdIndex.vue"
+import dacSecondIndex from "@/components/page/墩岙村/secondIndex.vue"
+import dacFourthIndex from "@/components/page/墩岙村/fourthIndex.vue"
+import dacFiveIndex from "@/components/page/墩岙村/fiveIndex.vue"
 export default{
   wx584bf9e6868bba55:{
     0:yxPage,
@@ -425,5 +437,19 @@ export default{
     2:snwSecondIndex,
     3:snwFourthIndex,
     info:snwContentInfo
+  },
+  易宝星:{
+    0:ybxIndex,
+    1:ybxThirdIndex,
+    2:ybxSecondIndex,
+    // 3:snwFourthIndex,
+    info:ybxContentInfo
+  },
+  墩岙村:{
+    0:dacIndex,
+    1:dacThirdIndex,
+    2:dacSecondIndex,
+    3:dacFourthIndex,
+    4:dacFiveIndex,
   }
 }

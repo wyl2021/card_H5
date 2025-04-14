@@ -1032,6 +1032,72 @@ export default {
 
       ]
     }),
+    易宝星: tabIcon.getBox({
+      activeColor: "#004097",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "ybx/tabIcon/mp.png",
+          inactiveIcon: "ybx/tabIcon/mp2.png",
+        },
+
+        {
+          text: "新闻",
+          activeIcon: "ybx/tabIcon/xw.png",
+          inactiveIcon: "ybx/tabIcon/xw2.png",
+        },
+        {
+          text: "业务",
+          activeIcon: "ybx/tabIcon/yw.png",
+          inactiveIcon: "ybx/tabIcon/yw2.png",
+        },
+        {
+          text: "案例",
+          activeIcon: "yt/tabIcon/al.png",
+          inactiveIcon: "yt/tabIcon/al2.png",
+        },
+        {
+          text: "全景",
+          activeIcon: "ybx/tabIcon/qj.png",
+          inactiveIcon: "ybx/tabIcon/qj2.png",
+        },
+
+      ]
+    }),
+    墩岙村: tabIcon.getBox({
+      activeColor: "#02814A",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "dac/tabIcon/mp.png",
+          inactiveIcon: "dac/tabIcon/mp2.png",
+        },
+
+        {
+          text: "介绍",
+          activeIcon: "dac/tabIcon/js.png",
+          inactiveIcon: "dac/tabIcon/js2.png",
+        },
+        {
+          text: "经济",
+          activeIcon: "dac/tabIcon/jj.png",
+          inactiveIcon: "dac/tabIcon/jj2.png",
+        },
+        {
+          text: "新闻",
+          activeIcon: "dac/tabIcon/xw.png",
+          inactiveIcon: "dac/tabIcon/xw2.png",
+        },
+        {
+          text: "全景",
+          activeIcon: "dac/tabIcon/qj.png",
+          inactiveIcon: "dac/tabIcon/qj2.png",
+        },
+
+      ]
+    }),
   }
 }
 
