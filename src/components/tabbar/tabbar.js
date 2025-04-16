@@ -1090,11 +1090,11 @@ export default {
           activeIcon: "dac/tabIcon/xw.png",
           inactiveIcon: "dac/tabIcon/xw2.png",
         },
-        {
-          text: "全景",
-          activeIcon: "dac/tabIcon/qj.png",
-          inactiveIcon: "dac/tabIcon/qj2.png",
-        },
+        // {
+        //   text: "全景",
+        //   activeIcon: "dac/tabIcon/qj.png",
+        //   inactiveIcon: "dac/tabIcon/qj2.png",
+        // },
 
       ]
     }),
