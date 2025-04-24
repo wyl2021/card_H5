@@ -22,7 +22,7 @@ service.interceptors.request.use(config => {
 service.interceptors.response.use(response => {
   // axios默认加了一层data
 
-  const { code, errmsg, data } = response.data
+  const { code, errmsg, data,errcode } = response.data
   //   要根据success的成功与否决定下面的操作
   // 判断token过期的处理
   if (localStorage.getItem("token") && code === 401) {
@@ -30,6 +30,24 @@ service.interceptors.response.use(response => {
     // store.dispatch('user/logout') // 登出action 删除token
     // router.push('/index')
     Toast.fail(errmsg)
+    // if(errcode===401){
+    //   uni.navigateTo({
+    //     // 跳回小程序的路径
+    //     url:
+    //       "/pages/index/index" ,
+    //     // 以下回调方法可以不要，如果需要调试的时候可以加上
+    //     success: function (res) {
+
+    //     },
+    //     fail: function (res) {
+
+    //     },
+    //     complete: function (res) {
+
+    //     },
+    //   });
+    // }
+
     return Promise.reject(new Error(errmsg))
   }
 
