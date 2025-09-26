@@ -21,7 +21,6 @@ service.interceptors.request.use(config => {
 // 响应拦截器
 service.interceptors.response.use(response => {
   // axios默认加了一层data
-
   const { code, errmsg, data,errcode } = response.data
   //   要根据success的成功与否决定下面的操作
   // 判断token过期的处理

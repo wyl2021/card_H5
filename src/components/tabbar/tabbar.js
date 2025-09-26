@@ -1098,6 +1098,27 @@ export default {
 
       ]
     }),
+    君睿智能: tabIcon.getBox({
+      activeColor: "#2347B3",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "jr/tabIcon/mp.png",
+          inactiveIcon: "jr/tabIcon/mp2.png",
+        },
+        {
+          text: "我们",
+          activeIcon: "jr/tabIcon/wm.png",
+          inactiveIcon: "jr/tabIcon/wm2.png",
+        },
+        {
+          text: "案例",
+          activeIcon: "jr/tabIcon/al.png",
+          inactiveIcon: "jr/tabIcon/al2.png",
+        },
+      ]
+    })
   }
 }
 

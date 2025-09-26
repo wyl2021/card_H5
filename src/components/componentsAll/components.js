@@ -29,7 +29,7 @@ import ytContent from "@/components/content/ytContent.vue"
 import ybxContent from "@/components/content/ybxContent.vue"
 import dacMusic from "@/components/content/dacMusic.vue"
 import popup from "@/components/tool/popup.vue"
-
+import error from "@/components/tool/error.vue"
 
 
 import yxPage from "../page/yx/yxPage.vue"
@@ -75,6 +75,7 @@ Vue.component('ytContent',ytContent)
 Vue.component('ybxContent',ybxContent)
 Vue.component('dacMusic',dacMusic)
 Vue.component('popup',popup)
+Vue.component('error',error)
 
 Vue.component('mxtIndex',mxtIndex)
 Vue.component('mxtThirdIndex',mxtThirdIndex)
