@@ -908,7 +908,7 @@ export default {
     }),
 
     京华达: tabIcon.getBox({
-      activeColor: "#FD3B14",
+      activeColor: "#FE701C",
       inactiveColor: "#666666",
       list: [
         {
