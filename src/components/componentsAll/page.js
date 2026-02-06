@@ -213,6 +213,11 @@ import jrIndex from "@/components/page/君睿智能/index.vue"
 import jrThirdIndex from "@/components/page/君睿智能/thirdIndex.vue"
 import jrSecondIndex from "@/components/page/君睿智能/secondIndex.vue"
 
+import jftxIndex from "@/components/page/九方通逊/index.vue"
+import jftxThirdIndex from "@/components/page/九方通逊/thirdIndex.vue"
+import jftxSecondIndex from "@/components/page/九方通逊/secondIndex.vue"
+import jftxFourthIndex from "@/components/page/九方通逊/fourthIndex.vue"
+
 export default {
   wx584bf9e6868bba55: {
     0: yxPage,
@@ -461,5 +466,11 @@ export default {
     0: jrIndex,
     1: jrThirdIndex,
     2: jrSecondIndex,
+  },
+  九方通逊: {
+    0: jftxIndex,
+    1: jftxThirdIndex,
+    2: jftxSecondIndex,
+    3: jftxFourthIndex,
   }
 }

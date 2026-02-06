@@ -1118,7 +1118,38 @@ export default {
           inactiveIcon: "jr/tabIcon/al2.png",
         },
       ]
-    })
+    }),
+
+    九方通逊: tabIcon.getBox({
+      activeColor: "#FD7D23",
+      inactiveColor: "#666666",
+      list: [
+        {
+          text: "名片",
+          activeIcon: "jftx/tabIcon/mp.png",
+          inactiveIcon: "jftx/tabIcon/mp2.png",
+        },
+
+        {
+          text: "新闻",
+          activeIcon: "jftx/tabIcon/xw.png",
+          inactiveIcon: "jftx/tabIcon/xw2.png",
+        },
+        {
+          text: "探索",
+          activeIcon: "jftx/tabIcon/ts.png",
+          inactiveIcon: "jftx/tabIcon/ts2.png",
+        },
+        {
+          text: "服务",
+          activeIcon: "jftx/tabIcon/fw.png",
+          inactiveIcon: "jftx/tabIcon/fw2.png",
+        },
+
+
+
+      ]
+    }),
   }
 }
 
