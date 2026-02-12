@@ -1135,11 +1135,11 @@ export default {
           activeIcon: "jftx/tabIcon/xw.png",
           inactiveIcon: "jftx/tabIcon/xw2.png",
         },
-        {
-          text: "探索",
-          activeIcon: "jftx/tabIcon/ts.png",
-          inactiveIcon: "jftx/tabIcon/ts2.png",
-        },
+        // {
+        //   text: "探索",
+        //   activeIcon: "jftx/tabIcon/ts.png",
+        //   inactiveIcon: "jftx/tabIcon/ts2.png",
+        // },
         {
           text: "服务",
           activeIcon: "jftx/tabIcon/fw.png",
