@@ -146,18 +146,20 @@ export default {
     border-radius: 16px;
 }
 
-.introduction-box {
-    .introduction-video {
-        background-image: url('https://card-img1.oss-cn-beijing.aliyuncs.com/jftx/image/videoBg.png');
-        padding: 10px;
-        background-size: 100% 100%;
+.introduction-box {}
 
-        video {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
-    }
+.introduction-video {
+    background-image: url('https://card-img1.oss-cn-beijing.aliyuncs.com/jftx/image/videoBg.png');
+    padding: 10px;
+    background-size: 100% 100%;
+
+
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
 .introduction-content {
@@ -182,12 +184,14 @@ export default {
     align-items: center;
 
 
-    .introduction-dw-content {
-        font-size: 11px;
-        color: #272727;
-        line-height: 16px;
-        text-align: center;
-    }
+
+}
+
+.introduction-dw-content {
+    font-size: 11px;
+    color: #272727;
+    line-height: 16px;
+    text-align: center;
 }
 
 .gradient-line {
@@ -204,16 +208,19 @@ export default {
     display: flex;
     justify-content: space-around;
 
-    .introduction-organization-item {
-        font-size: 10px;
-        color: #272727;
 
-    }
 
-    .introduction-organization-item-number {
-        font-size: 20px;
-        color: #FF7D00;
-        font-weight: bold;
-    }
+}
+
+.introduction-organization-item {
+    font-size: 10px;
+    color: #272727;
+
+}
+
+.introduction-organization-item-number {
+    font-size: 20px;
+    color: #FF7D00;
+    font-weight: bold;
 }
 </style>
