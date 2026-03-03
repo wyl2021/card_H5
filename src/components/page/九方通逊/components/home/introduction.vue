@@ -1,17 +1,14 @@
 <template>
     <div class="introduction">
-        <van-image :src="IMG + '/jftx/headerImage/qyjj.png?time=' + new Date().getTime()" width="161px"
-            height="100%"></van-image>
+        <van-image :src="IMG + '/jftx/headerImage/qyjj.png'" width="161px" height="100%"></van-image>
         <div class="introduction-box">
             <div class="introduction-video">
-                <video :src="IMG + 'jftx/jfmv.mov'" width="100%" height="100%" controls playsinline :poster="IMG + 'jftx/image/video.png'
-                    "></video>
-                <!-- <video :src="IMG + 'jftx/jfmv.mov#=1'" width="100%" height="100%" controls :playsinline="true" preload="metadata
-                    "></video> -->
+                <video :src="IMG + 'jftx/jfmv.mov'" width="100%" height="100%" controls playsinline
+                    :poster="IMG + 'jftx/image/video.png'" preload="metadata"></video>
             </div>
             <div class="introduction-content">{{ getContent() }}</div>
             <!-- 九方定位 -->
-            <van-image :src="IMG + '/jftx/headerImage/jfdw.png?time=' + new Date().getTime()" width="85px" height="100%"
+            <van-image :src="IMG + '/jftx/headerImage/jfdw.png'" width="85px" height="100%"
                 style="margin: 10px auto;display: block;"></van-image>
             <div class="dw-box">
                 <div v-for="dw in dwList" :key="dw.name" class="introduction-dw">
@@ -22,7 +19,7 @@
                 </div>
             </div>
             <!-- 组织网点 -->
-            <van-image :src="IMG + '/jftx/headerImage/zzwd.png?time=' + new Date().getTime()" width="85px" height="100%"
+            <van-image :src="IMG + '/jftx/headerImage/zzwd.png'" width="85px" height="100%"
                 style="margin: 10px auto;display: block;"></van-image>
             <van-image v-if="getBranch('组织网点').image" :src="getBranch('组织网点').image.url" width="100%"
                 height="100%"></van-image>
@@ -42,17 +39,17 @@
 
             </div>
             <!-- 数字九方 -->
-            <van-image :src="IMG + '/jftx/headerImage/szjf.png?time=' + new Date().getTime()" width="153px"
-                height="100%" style="margin: 10px auto;display: block;"></van-image>
+            <van-image :src="IMG + '/jftx/headerImage/szjf.png'" width="153px" height="100%"
+                style="margin: 10px auto;display: block;"></van-image>
             <van-image v-if="getBranch('数字九方').image" :src="getBranch('数字九方').image.url" width="100%"
                 height="100%"></van-image>
             <!-- 荣耀资质 -->
-            <van-image :src="IMG + '/jftx/headerImage/ryzz.png?time=' + new Date().getTime()" width="73px" height="100%"
+            <van-image :src="IMG + '/jftx/headerImage/ryzz.png'" width="73px" height="100%"
                 style="margin: 10px auto;display: block;"></van-image>
             <div v-html="getBranch('荣耀资质').rich_text" style="line-height:20px;font-size: 11px;"></div>
             <!-- 企业愿景 -->
-            <van-image :src="IMG + '/jftx/headerImage/qyyj.png?time=' + new Date().getTime()" width="153px"
-                height="100%" style="margin: 10px auto;display: block;"></van-image>
+            <van-image :src="IMG + '/jftx/headerImage/qyyj.png'" width="153px" height="100%"
+                style="margin: 10px auto;display: block;"></van-image>
             <div v-html="getBranch('企业愿景').rich_text" style="line-height:20px;font-size: 11px;"></div>
         </div>
     </div>
@@ -138,7 +135,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .introduction {
     padding: 15px;
     box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.02);
@@ -146,20 +143,18 @@ export default {
     border-radius: 16px;
 }
 
-.introduction-box {}
+.introduction-box {
+    .introduction-video {
+        background-image: url('https://card-img1.oss-cn-beijing.aliyuncs.com/jftx/image/videoBg.png');
+        padding: 10px;
+        background-size: 100% 100%;
 
-.introduction-video {
-    background-image: url('https://card-img1.oss-cn-beijing.aliyuncs.com/jftx/image/videoBg.png');
-    padding: 10px;
-    background-size: 100% 100%;
-
-
-}
-
-video {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+        video {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
 }
 
 .introduction-content {
@@ -184,14 +179,12 @@ video {
     align-items: center;
 
 
-
-}
-
-.introduction-dw-content {
-    font-size: 11px;
-    color: #272727;
-    line-height: 16px;
-    text-align: center;
+    .introduction-dw-content {
+        font-size: 11px;
+        color: #272727;
+        line-height: 16px;
+        text-align: center;
+    }
 }
 
 .gradient-line {
@@ -208,19 +201,16 @@ video {
     display: flex;
     justify-content: space-around;
 
+    .introduction-organization-item {
+        font-size: 10px;
+        color: #272727;
 
+    }
 
-}
-
-.introduction-organization-item {
-    font-size: 10px;
-    color: #272727;
-
-}
-
-.introduction-organization-item-number {
-    font-size: 20px;
-    color: #FF7D00;
-    font-weight: bold;
+    .introduction-organization-item-number {
+        font-size: 20px;
+        color: #FF7D00;
+        font-weight: bold;
+    }
 }
 </style>
