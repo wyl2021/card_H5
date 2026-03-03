@@ -1,6 +1,6 @@
 <template>
     <div class="new-page">
-        <van-tabs v-model="active" title-active-color="#FF8000" color="#FF8000" @click="onClick">
+        <van-tabs v-model="active" title-active-color="#FF8000" color="#FF8000">
             <van-tab v-for="(item, index) in tabList" :title="item.name" :key="index">
                 <div class="new-box" v-for="(item2, index2) in item.solution_list" :key="index2"
                     @click="getTo(item2.id)">

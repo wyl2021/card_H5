@@ -1,5 +1,5 @@
 <template>
-    <div class="p-page" style="background-color:#fff;margin-top: 20px;">
+    <div class="p-page" style="background-color:#fff;">
         <!-- 名片样式 -->
         <div class="headerBg">
             <div class="cardBg" :style="{
@@ -13,19 +13,20 @@
                     </div>
                     <div class="pm">
                         <div class="text1">
-                            <van-image :src="IMG + 'jftx/icon/phone.png'" width="10" height="10" class="m-r-3" />
+                            <van-image :src="IMG + 'jftx/icon/phone.png'" width="9" height="9" class="m-r-3" />
                             {{ userInfo.phone }}
                         </div>
                         <div class="text2">
-                            <van-image :src="IMG + 'jftx/icon/email.png'" width="10" height="10" class="m-r-3" />{{
+                            <van-image :src="IMG + 'jftx/icon/email.png'" width="9" height="7" class="m-r-7" />{{
                                 userInfo.email }}
                         </div>
+
                         <div class="text3">
-                            <van-image :src="IMG + 'jftx/icon/web.png'" width="10" height="10" class="m-r-3" />
+                            <van-image :src="IMG + 'jftx/icon/web.png'" width="9" height="10" class="m-r-3" />
                             {{ userInfo.web }}
                         </div>
                         <div style="align-items: start;display: flex;">
-                            <van-image :src="IMG + 'jftx/icon/address.png'" width="10" height="10" class="m-r-3" />
+                            <van-image :src="IMG + 'jftx/icon/address.png'" width="9" height="11" class="m-r-7" />
                             <div class="text4">{{ userInfo.address }}</div>
                         </div>
                     </div>
@@ -61,7 +62,7 @@
 
         </div>
         <!-- 公司简介 -->
-        <div>
+        <div style="margin-bottom: 20px;">
             <van-tabs v-model="active" animated swipeable color="#FF7D00" active-color="#FF7D00">
                 <van-tab v-for="(item, index) in tabList" :key="index" :title="item.name">
                     <div v-if="active === index">
@@ -166,6 +167,7 @@ export default {
         // this.getCommitUserName("c7705fae-fd7e-11f0-a136-00163e237fe6");
         this.getUserInfo();
         this.getList();
+
     },
 
     methods: {
@@ -262,7 +264,7 @@ export default {
                 list.forEach((item) => {
                     if (item.key == str) {
                         webAddress = !(item.value == "" || item.value == null)
-                            ? item.value
+                            ? item.value.trim()
                             : tacit;
                     } else {
                         webAddress = tacit;
@@ -284,14 +286,16 @@ export default {
                         "webUrl",
                         "www.jiufanglogistics.cn"
                     ),
+
                     Ename: this.getWebAddress(
                         res.data.content_field,
                         "Ename",
                         "-"
                     ),
                 };
-
+                console.log(this.userInfo.web);
             });
+
         },
         // 拨打电话
         callPhone(phoneNumber) {
@@ -412,6 +416,10 @@ export default {
 
 .m-r-3 {
     margin-right: 3px;
+}
+
+.m-r-7 {
+    margin-right: 7px;
 }
 
 .addressLine {

@@ -80,13 +80,21 @@ const router = new Router({
   ]
 })
 
-router.afterEach((to, from) => {
-  // if(to.meta.title){
-  // console.log(to)
-  document.title = to.query.title || to.meta.title || '名片'
-  // }
-  // next()
-  // 动态设置标题
+// 动态设置页面标题
+router.afterEach((to) => {
+  // 优先级：query.title > meta.title > 默认标题
+  const title = to.query.title || to.meta.title || '名片'
 
+  // 只有标题变化时才更新，避免不必要的DOM操作
+  if (document.title !== title) {
+    document.title = title
+  }
 })
+
+// Tab切换标记
+// router.beforeEach((to, from, next) => {
+//   // 记录是否来自Tab切换（通过比较meta.index）
+//   to.meta.fromTab = from.meta?.index !== undefined
+//   next()
+// })
 export default router

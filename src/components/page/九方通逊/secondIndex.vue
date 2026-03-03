@@ -24,7 +24,7 @@
                 </template>
 
                 <div v-else class="industry-container-jjfa">
-                    <van-image :src="item4.image.url" width="175px" height="72px" v-for="(item4, index4) in getPlan()"
+                    <van-image :src="item4.image.url" width="170px" height="72px" v-for="(item4, index4) in getPlan()"
                         :key="index4" @click="getTo(true, item4.id)"></van-image>
                 </div>
             </van-tab>
@@ -332,9 +332,11 @@ export default {
 
 .industry-container-jjfa {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     margin: 10px 15px;
     grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .zx-container {
@@ -416,6 +418,7 @@ export default {
         font-size: 13px;
         color: #333;
         margin-left: 5px;
+        font-weight: bold;
     }
 
     .contact-number {
@@ -432,12 +435,13 @@ export default {
 }
 
 .contact-button {
-    color: #FF7D00;
+    color: #FF8000;
     width: 65px;
-    height: 26px;
+    // height: 26px;
+    padding: 5px 0;
     font-size: 11px;
     border-radius: 13px;
-    border: 1px solid #FF7D00;
+    border: 1px solid #FF8000;
     text-align: center;
     display: flex;
     align-items: center;
@@ -445,8 +449,8 @@ export default {
 }
 
 .contact-describe {
-    margin-left: 30px;
-    font-size: 10px;
+    margin-left: 25px;
+    font-size: 11px;
     color: #999999;
     display: block;
     line-height: 20px;
