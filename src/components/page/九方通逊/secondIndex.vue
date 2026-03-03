@@ -151,6 +151,15 @@ export default {
         this.getIndustryList();
         this.getSolutionTypeList2();
     },
+    watch: {
+        '$route': {
+            handler(to, from) {
+                // 当路由变化时（切换到其他页面再返回），重置active为0
+                this.active = 0;
+            },
+            immediate: true
+        }
+    },
     computed: {
 
     },

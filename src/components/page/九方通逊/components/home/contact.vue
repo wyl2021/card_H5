@@ -47,8 +47,8 @@
         </div>
         <!-- 国际物流常见问题 -->
         <div>
-            <van-image :src="IMG + '/jftx/headerImage/gjwlcjwt.png?time=' + new Date().getTime()" width="308px"
-                height="100%" style="display: block;margin: 10px auto  0 auto;"></van-image>
+            <van-image :src="IMG + '/jftx/headerImage/gjwlcjwt.png'" width="308px" height="100%"
+                style="display: block;margin: 10px auto  0 auto;"></van-image>
             <van-tabs v-model="active" animated swipeable title-active-color="#FF8000" color="#FF8000">
                 <van-tab v-for="(item, index) in getTabList()" :key="index" :title="item.name">
                     <div v-for="(subItem, subIndex) in item.list" :key="subIndex" class="p-box">
