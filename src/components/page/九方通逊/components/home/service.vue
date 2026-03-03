@@ -2,12 +2,14 @@
     <div class="service">
         <div class="service-box">
             <div class="service-item">
-                <van-image :src="IMG + '/jftx/headerImage/fwjj.png?time=' + new Date().getTime()" width="195px"
-                    height="100%" style="margin-left: 15px;"></van-image>
+                <van-image :src="IMG + '/jftx/headerImage/fwjj.png'" width="195px" height="100%"
+                    style="margin-left: 15px;" :loading="true" :error="true"></van-image>
                 <van-tabs v-model="active" title-active-color="#FF8000" color="#FF8000" line-width="16px">
                     <van-tab v-for="(item, index) in list" :key="index" :title="item.name">
-                        <div v-if="active === index">
-                            <van-image :src="item.img" height="100%" style="margin:0 4px 0 17px"></van-image>
+                        <div v-show="active === index">
+                            <van-image :src="item.img" height="100%"
+                                :style="{ margin: active === 0 ? '0px 4px 0 17px' : '10px 4px 0 17px' }" :loading="true"
+                                :error="true"></van-image>
                             <div v-if="item.name === '跨境专线物流'">
                                 <div v-for="value in item.list" :key="value.id" class="solution-item">
                                     <div class="solution-name">{{ value.name }}<span class="solution-ename">{{
@@ -31,8 +33,8 @@
                     </van-tab>
                 </van-tabs>
             </div>
-            <van-image :src="IMG + '/jftx/headerImage/jjfa.png?time=' + new Date().getTime()" width="211px"
-                height="100%" style="display: block;margin: 20px auto 0 auto;"></van-image>
+            <van-image :src="IMG + '/jftx/headerImage/jjfa.png'" width="211px" height="100%"
+                style="display: block;margin: 20px auto 0 auto;"></van-image>
             <div class="service-item-fa">
                 <van-image :src="item4.image.url" width="170px" height="72px" v-for="(item4, index4) in planList"
                     :key="index4" @click="planInfo(item4.id)"></van-image>

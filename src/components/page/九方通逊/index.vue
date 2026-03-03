@@ -232,7 +232,7 @@ export default {
 
                     this.serviceList = [
                         { name: '跨境专线物流', list: getService('跨境专线物流') ? getService('跨境专线物流').solution_list : [], img: getService('跨境专线物流') ? getService('跨境专线物流').image.url : '' },
-                        { name: '海外仓配', list: getService('海外仓配') ? getService('海外仓配').solution_list : [], img: getService('跨境专线物流') ? getService('跨境专线物流').image.url : '' }
+                        { name: '海外仓配', list: getService('海外仓配') ? getService('海外仓配').solution_list : [], img: getService('海外仓配') ? getService('海外仓配').image.url : '' }
                     ]
                     this.planList = getService('各行业国际物流解决方案') ? getService('各行业国际物流解决方案').solution_list : [];
                     this.contactList = [
