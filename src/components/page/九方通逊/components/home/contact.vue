@@ -23,8 +23,8 @@
                         <span v-if="index !== 2" class="contact-describe"><span
                                 style="color:#FF7D00;">24小时</span>自助语音客服</br><span>人工客服时间
                                 <span style="color:#FF7D00;">08:00-22:00</span></span></span>
-                        <span v-else class="contact-describe">国内网点 <span style="color:#FF7D00;">26
-                            </span>个</br><span>国外网点 <span style="color:#FF7D00;">7
+                        <span v-else class="contact-describe">国内网点 <span style="color:#FF7D00;">32
+                            </span>个</br><span>国外网点 <span style="color:#FF7D00;">8
                                 </span>个</span></span>
                     </div>
                     <van-image :src="IMG + '/jftx/image/' + item.img2 + '?time=' + new Date().getTime()" width="121px"
@@ -35,7 +35,7 @@
         <div class="contact-box">
             <div class="contact-item-box" v-for="(item, index) in getBranch('联系我们').list">
                 <span class="lx-name">{{ item.name }}</span>
-                <span class="lx-number">电话：<span style="font-size: 12px;color: #666;">{{ item.name_en ? item.name_en :
+                <span v-if="item.name!=='投诉与建议收集'" class="lx-number">电话：<span style="font-size: 12px;color: #666;">{{ item.name_en ? item.name_en :
                     "-" }}</span></span>
                 <span class="lx-email">邮箱：<div style="display: flex;flex-direction: column;"><span
                             v-for="email in item.describe.split(' ')" :key="email"

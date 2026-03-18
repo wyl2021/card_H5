@@ -18,13 +18,14 @@
                             <div class="describe">{{ item3.describe }}</div>
                         </div>
                         <van-image :src="IMG + '/jftx/image/ljxq.png'" width="72px" height="18px"
-                            style="margin: 10px auto  0 auto;display: block; " @click="getTo(item2.id)"></van-image>
+                            style="margin: 10px auto  0 auto;display: block; "
+                            @click="getTo(false, item2.id)"></van-image>
                     </div>
                 </template>
 
                 <div v-else class="industry-container-jjfa">
-                    <van-image :src="item4.image.url" width="175px" height="90px" v-for="(item4, index4) in getPlan()"
-                        :key="index4" @click="getTo(item4.id)"></van-image>
+                    <van-image :src="item4.image.url" width="170px" height="72px" v-for="(item4, index4) in getPlan()"
+                        :key="index4" @click="getTo(true, item4.id)"></van-image>
                 </div>
             </van-tab>
         </van-tabs>
@@ -61,8 +62,8 @@
                             <span v-if="index !== 2" class="contact-describe"><span
                                     style="color:#FF7D00;">24小时</span>自助语音客服</br><span>人工客服时间
                                     <span style="color:#FF7D00;">08:00-22:00</span></span></span>
-                            <span v-else class="contact-describe">国内网点 <span style="color:#FF7D00;">26
-                                </span>个</br><span>国外网点 <span style="color:#FF7D00;">7
+                            <span v-else class="contact-describe">国内网点 <span style="color:#FF7D00;">32
+                                </span>个</br><span>国外网点 <span style="color:#FF7D00;">8
                                     </span>个</span></span>
                         </div>
                         <van-image :src="IMG + '/jftx/image/' + item.img2 + '?time=' + new Date().getTime()"
@@ -81,12 +82,11 @@
         </van-popup>
         <van-popup v-model="wdShow" round :style="{ width: '90%', 'max-height': '604px' }" :closeable="true">
             <div style="padding: 30px 10px 30px 10px ;">
-                <van-search v-model="addressInput" shape="round" placeholder="请输入地址或点击下方地址~" class="search" />
+                <!-- <van-search v-model="addressInput" shape="round" placeholder="请输入地址或点击下方地址~" class="search" /> -->
                 <div style="margin: 0 10px;">
                     <div class="addressLine">
                         <div class="line"></div>
                         <span class="addressText">九方总部 · 中国深圳</span>
-
                     </div>
                     <div style="margin-top: 10px;display: flex;flex-direction: column;">
                         <span class="addressName">热线电话：</span>
@@ -115,6 +115,7 @@
 </template>
 
 <script>
+import { Toast } from 'vant';
 export default {
     name: 'ServiceSolution',
     data() {
@@ -150,21 +151,38 @@ export default {
         this.getIndustryList();
         this.getSolutionTypeList2();
     },
+    watch: {
+        '$route': {
+            handler(to, from) {
+                // 当路由变化时（切换到其他页面再返回），重置active为0
+                this.active = 0;
+            },
+            immediate: true
+        }
+    },
     computed: {
 
     },
 
     methods: {
-        getTo(id) {
+        getTo(type, id) {
             this.$router.push({
                 path: '/categorySolutionInfo',
-                query: { id: id },
+                query: {
+                    id: id,
+                    isColor: true,
+                    isPage: type ? true : false
+                },
             });
         },
         getProductTo(id) {
             this.$router.push({
                 path: '/productInfo',
-                query: { id: id },
+                query: {
+                    id: id,
+                    isColor: true,
+                    isPage: true
+                },
             });
         },
         // 复制客服热线
@@ -323,9 +341,11 @@ export default {
 
 .industry-container-jjfa {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     margin: 10px 15px;
     grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .zx-container {
@@ -407,6 +427,7 @@ export default {
         font-size: 13px;
         color: #333;
         margin-left: 5px;
+        font-weight: bold;
     }
 
     .contact-number {
@@ -423,12 +444,13 @@ export default {
 }
 
 .contact-button {
-    color: #FF7D00;
+    color: #FF8000;
     width: 65px;
-    height: 26px;
+    // height: 26px;
+    padding: 5px 0;
     font-size: 11px;
     border-radius: 13px;
-    border: 1px solid #FF7D00;
+    border: 1px solid #FF8000;
     text-align: center;
     display: flex;
     align-items: center;
@@ -436,8 +458,8 @@ export default {
 }
 
 .contact-describe {
-    margin-left: 30px;
-    font-size: 10px;
+    margin-left: 25px;
+    font-size: 11px;
     color: #999999;
     display: block;
     line-height: 20px;

@@ -30,7 +30,7 @@
                             item.number }}<span class="introduction-organization-item">+</span></div>
                 </div>
 
-                <div class="gradient-line"> </div>
+                <!-- <div class="gradient-line"> </div> -->
                 <div class="introduction-organization">
                     <div v-for="item in getOrganization()" :key="'name-' + item.name"
                         class="introduction-organization-item">{{
@@ -76,12 +76,12 @@ export default {
             },
             {
                 name: '服务定位',
-                content: '九方时效d稳定',
+                content: '九方时效稳定',
                 icon: 'fw.png'
             },
             {
                 name: '客户定位',
-                content: '卖家及跨境电商平台',
+                content: '工厂卖家及电商平台',
                 icon: 'kh.png'
             },
             {

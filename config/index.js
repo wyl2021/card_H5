@@ -67,7 +67,15 @@ module.exports = {
       '/JhdTraceMsg':{
         target:'http://in.kwt56.com:8253',///'http://la.kwt56.com:8259',
         changeOrigin: true,
-      }
+      },
+      '/news-api':{
+        target:'https://www.jiufanglogistics.cn',
+        changeOrigin: true,
+      },
+      // '/logistics':{
+      //   target:'https://www.jiufanglogistics.cn',
+      //   changeOrigin: true,
+      // }
     },
 
     // Various Dev Server settings

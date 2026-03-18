@@ -16,10 +16,30 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     data() {
         return {
-            tabList: [],
+            tabList: [
+                {
+                    name:'物流咨询'
+                },
+                 {
+                    name:'外贸经验'
+                },
+                 {
+                    name:'电商相关'
+                },
+                 {
+                    name:'通知公告'
+                },
+                 {
+                    name:'九方新闻'
+                },
+                 {
+                    name:'创始人专栏'
+                },
+            ],
             productList: [],
             active: 0
         };
@@ -44,12 +64,24 @@ export default {
             });
         },
         getTabList() {
-            this.$http
-                .categorySolutionTypeList({ parent_name: "新闻" })
-                .then((res) => {
-                    console.log(res.data.list);
-                    this.tabList = res.data.list;
-                });
+            axios({
+                method: 'post',
+                url: '/news-api/portal/front/newsCenter/logisticsNews',
+                data: {
+                    pageNo: 1,
+                    pageSize: 20,
+                    query:""
+                }
+            }).then((res) => {
+                console.log(res);
+                // this.tabList = res.data.list;
+            })
+            // this.$http
+            //     .categorySolutionTypeList({ parent_name: "新闻" })
+            //     .then((res) => {
+            //         console.log(res.data.list);
+            //         this.tabList = res.data.list;
+            //     });
 
         },
     },
