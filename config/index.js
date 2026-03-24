@@ -72,6 +72,7 @@ module.exports = {
         target:'https://www.jiufanglogistics.cn',
         changeOrigin: true,
       },
+      
       // '/logistics':{
       //   target:'https://www.jiufanglogistics.cn',
       //   changeOrigin: true,

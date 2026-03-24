@@ -19,18 +19,18 @@
                         </div>
                         <van-image :src="IMG + '/jftx/image/ljxq.png'" width="72px" height="18px"
                             style="margin: 10px auto  0 auto;display: block; "
-                            @click="getTo(false, item2.id)"></van-image>
+                            @click="getTo(false, item2.id,true)"></van-image>
                     </div>
                 </template>
 
                 <div v-else class="industry-container-jjfa">
                     <van-image :src="item4.image.url" width="170px" height="72px" v-for="(item4, index4) in getPlan()"
-                        :key="index4" @click="getTo(true, item4.id)"></van-image>
+                        :key="index4" @click="getTo(true, item4.id,false)"></van-image>
                 </div>
             </van-tab>
         </van-tabs>
         <!-- 行业资讯 -->
-        <div class="zx-container">
+        <!-- <div class="zx-container">
             <h3>行业资讯</h3>
             <div class="zx-list">
                 <div v-for="value in industryList" :key="value.id" class="zx-item" @click="getProductTo(value.id)">
@@ -38,7 +38,7 @@
                     <span class="zx-name_en">{{ value.name_en }}</span>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- 联系我们 -->
         <div class="lxwm-container">
             <h3>联系我们</h3>
@@ -148,7 +148,7 @@ export default {
     },
     created() {
         this.getSolutionTypeList();
-        this.getIndustryList();
+        // this.getIndustryList();
         this.getSolutionTypeList2();
     },
     watch: {
@@ -165,13 +165,14 @@ export default {
     },
 
     methods: {
-        getTo(type, id) {
+        getTo(type, id, isComponent) {
             this.$router.push({
                 path: '/categorySolutionInfo',
                 query: {
                     id: id,
                     isColor: true,
-                    isPage: type ? true : false
+                    isPage: type ? true : false,
+                    isComponent: isComponent
                 },
             });
         },
@@ -256,21 +257,21 @@ export default {
             return list
         },
         // 行业列表
-        async getIndustryList() {
-            try {
-                const res = await this.$http.productList();
-                if (res.data && res.data.list) {
-                    this.industryList = res.data.list;
-                    // console.log("行业分类", this.industryList)
-                } else {
-                    this.industryList = [];
-                    console.warn('行业分类数据为空');
-                }
-            } catch (error) {
-                console.error('获取行业分类失败:', error);
-                this.industryList = [];
-            }
-        },
+        // async getIndustryList() {
+        //     try {
+        //         const res = await this.$http.productList();
+        //         if (res.data && res.data.list) {
+        //             this.industryList = res.data.list;
+        //             // console.log("行业分类", this.industryList)
+        //         } else {
+        //             this.industryList = [];
+        //             console.warn('行业分类数据为空');
+        //         }
+        //     } catch (error) {
+        //         console.error('获取行业分类失败:', error);
+        //         this.industryList = [];
+        //     }
+        // },
         // 打开地图
         navigateToMap(address, name) {
             Toast.loading({
