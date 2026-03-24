@@ -1,87 +1,36 @@
 <template>
-  <div :class="{ 'b-color': isColor, 'p-page': isPage }" style="height: auto;min-height: 100%;">
-    <!-- 加载中
-    <div v-if="loading" class="loading-container">
-      <van-loading size="24px" vertical>加载中...</van-loading>
-    </div>
-     -->
-    <!-- 富文本模式 -->
-
-      <div v-if="solutionImgList.length > 0" class="image-container">
-         <van-image 
-        :src="item" 
-        v-for="(item, index) in solutionImgList" 
-        :key="index" 
-        style="width: 100%;display: block;"
-        @click="getImage(item)"
-      >
-        <template slot="loading">
-          <van-loading type="spinner" size="20" />
-        </template>
-      </van-image>
-      </div>
-     <div v-else>
-       <div v-if="isCustomize && customizeData">
+  <div class="trilateralInfo-box">
+       <div v-if="customizeData">
         <p class="customizeData-title">{{ customizeData.title || '' }}</p>
         <div class="customizeData-release">{{ (customizeData.releaseTime ? customizeData.releaseTime.split(' ')[0] : '') + '  编辑：九方通逊跨境物流网' }}</div>
         <div ref="richTextContainer" v-html="processedCustomizeText" class="rich-text-content"></div>
       </div>
-      <div v-else-if="!isCustomize && processedRichText" v-html="processedRichText" class="rich-text-content"></div>
       <div v-else class="empty-content">暂无内容</div>
-     </div>
-     <component v-if="isComponent" :is="currentComponent" :data="data"></component>
     </div>
 
 </template>
 
 <script >
-import { ImagePreview } from 'vant';
 import axios from 'axios'
-import component from "@/pages/data/componet.js"
-
 export default {
   name: 'categorySolutionInfo',
 
   data() {
     return {
-      solutionImgList: [],
       rich_text: '',
       customizeData: null,
-      isColor: false,
-      isPage: true,
-      isCustomize: false,
       processedRichText: '',
       processedCustomizeText: '',
       loading: false,
-      data:null,
-      isComponent:false,
     }
   },
   
   computed: {
-    computedIsPage() {
-      return this.$route.query.isPage
-    },
-    currentComponent(){
-      console.log(localStorage.getItem("id"),component)
-      return component[localStorage.getItem("id")][0]
-    }
-    ,
-    // currentComponent(){
-    //   return this.isComponent[this.$route.query.component] || {}
-    // }
+
   },
   
   created() {
-    this.isCustomize = this.$route.query.isCustomize || false //是否三方详情
-    this.isColor = this.$route.query.isColor || false ///是否带颜色
-    this.isPage = this.$route.query.isPage || true  //带间距
-    this.isComponent=this.$route.query.isComponent || false //是否使用组件
-    if (this.isCustomize) {
-      this.getCustomizeDetail()
-    } else {
-      this.getDetail()
-    }
+         this.getCustomizeDetail()
 
   },
   
@@ -230,37 +179,6 @@ export default {
     },
     
     /**
-     * 获取详情数据（原有接口）
-     */
-    getDetail() {
-      this.loading = true
-      // console.log(this.$route.query.id)
-      this.$http.categorySolutionTypeDetail({ id: this.$route.query.id })
-        .then((res) => {
-          if (res.code == 200) {
-            this.data = res.data
-           
-            if (res.data.solution_image.length > 0) {
-            res.data.solution_image.forEach((res2) => {
-              this.solutionImgList.push(res2.url)
-            })            
-          }else{
-            console.log(!this.isCustomize && this.processedRichText)
-            this.rich_text = res.data.rich_text || '';
-            this.processedRichText = this.processRichText(this.rich_text);
-            }
-          
-          }
-        })
-        .catch(err => {
-          console.error('获取详情失败:', err);
-        })
-        .finally(() => {
-          this.loading = false
-        });
-    },
-
-    /**
      * 获取自定义详情
      */
     getCustomizeDetail() {
@@ -270,6 +188,7 @@ export default {
         method: 'get',
       })
         .then((res) => {
+            console.log(res)
           if (res.data.code == 0) {
             this.customizeData = res.data.data;
             this.processedCustomizeText = this.processRichText(this.customizeData.text || '');
@@ -283,30 +202,6 @@ export default {
         });
     },
 
-    /**
-     * 图片预览
-     */
-    getImage(img) {
-      if (this.solutionImgList && this.solutionImgList.length > 0) {
-        ImagePreview({
-          images: this.solutionImgList,
-          startPosition: this.solutionImgList.indexOf(img),
-          closeable: true,
-          showIndex: true,
-          loop: true
-        });
-      }
-    },
-
-    /**
-     * 重置数据
-     */
-    resetData() {
-      this.solutionImgList = [];
-      this.customizeData = null;
-      this.processedRichText = '';
-      this.processedCustomizeText = '';
-    },
     
     /**
      * 修复视频样式（在 DOM 更新后执行）
@@ -345,6 +240,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.trilateralInfo-box {
+    height: auto;
+    min-height: 100%;
+    background-color: #fff;
+    padding: 16px;
+}
 .loading-container {
   display: flex;
   justify-content: center;
