@@ -318,7 +318,7 @@ export default {
             });
             this.$router.push({
                 path: "/map",
-                query: { address: address, name: name, isTap: true },
+                query: { address: address?address:'深圳市龙岗区吉华街道甘坑社区甘李二路9号金苹果创新园厂房c201', name: name, isTap: true },
             });
             Toast.clear;
         },
