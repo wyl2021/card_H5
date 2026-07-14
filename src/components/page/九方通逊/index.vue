@@ -268,7 +268,7 @@ export default {
         },
         //判断
         getWebAddress(list, str, tacit = "-") {
-            if (JSON.stringify(list) !== JSON.stringify([])) {
+            if (list && Array.isArray(list) && list.length > 0) {
                 let webAddress = null;
                 list.forEach((item) => {
                     if (item.key == str) {

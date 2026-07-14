@@ -21,12 +21,12 @@
           <div class="pm">
             <div class="text4">
               <van-image :src="IMG + 'jhd/icon/phone.png'" />{{
-                userInfo.phone ? userInfo.phone.split(' ')[0] : '-'
+                userInfo.phone ? userInfo.phone.split('  ')[0] : '-'
               }}
             </div>
             <div class="text5">
               <van-image :src="IMG + 'jhd/icon/email.png'" />{{
-                userInfo.email
+                userInfo.email? userInfo.email : '-'
               }}
             </div>
             <div class="text7">
@@ -88,12 +88,12 @@
           <div class="pm">
             <div class="text4">
               <van-image :src="IMG + 'jhd/icon/phone.png'" />{{
-                userInfo.phone ? userInfo.phone.split(' ')[0] : '-'
+                userInfo.phone ? userInfo.phone.split('  ')[0] : '-'
               }}
             </div>
             <div class="text5">
               <van-image :src="IMG + 'jhd/icon/email.png'" />{{
-                userInfo.email
+                userInfo.email? userInfo.email : '-'
               }}
             </div>
             <div class="text7">
