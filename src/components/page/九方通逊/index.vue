@@ -38,13 +38,13 @@
 
             </div>
             <div class="cardInfo">
-                <!-- <div class="cardInfoItem">
+                <div class="cardInfoItem" @click="getShareUrl(userInfo)">
                     <van-image :src="IMG + '/jftx/image/share.png'" width="20" height="20"></van-image>
                     <div class="cardInfoItemContent">
                         分享名片
                     </div>
                 </div>
-                <div class="cardLine"></div> -->
+                <div class="cardLine"></div>
                 <div class="cardInfoItem" @click="callPhone(userInfo.phone)">
                     <van-image :src="IMG + '/jftx/image/phone.png'" width="20" height="20"></van-image>
                     <div class="cardInfoItemContent">
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="cardLine"></div>
-                <div class="cardInfoItem" @click="navigateToMap(userInfo.address, '九方通逊')">
+                <div class="cardInfoItem" @click="openAddressPopup">
                     <van-image :src="IMG + '/jftx/image/address.png'" width="20" height="20"></van-image>
                     <div class="cardInfoItemContent">
                         地图导航
@@ -92,7 +92,8 @@
                         <span class="addressText">九方总部 · 中国深圳</span>
 
                     </div>
-                    <div style="margin-top: 10px;display: flex;flex-direction: column;">
+                    <div style="margin-top: 10px;display: flex;flex-direction: column;"
+                        @click="callPhone('400-7755-990')">
                         <span class="addressName">热线电话：</span>
                         <span class="addressDescribe">400-7755-990</span>
                     </div>
@@ -123,7 +124,7 @@ import { Toast } from "vant";
 import Introduction from "@/components/page/九方通逊/components/home/introduction.vue";
 import Service from "@/components/page/九方通逊/components/home/service.vue";
 import Contact from "@/components/page/九方通逊/components/home/contact.vue";
-
+import wx from 'weixin-js-sdk';
 export default {
     components: {
         Introduction,
@@ -186,6 +187,9 @@ export default {
         getWdShow() {
             this.wdShow = !this.wdShow
         },
+        openAddressPopup() {
+            this.wdShow = true
+        },
         // 电话
         getPhone() {
             if (!this.parseContactInfo(this.phoneAndAddress.pdf).phone) {
@@ -224,6 +228,13 @@ export default {
                 query: { address: address, name: name, isTap: true },
             });
             Toast.clear;
+        },
+        // 分享
+        getShareUrl(userInfo) {
+            Toast({
+        message: '请点击右上角「···」分享',
+        duration: 2000
+    });
         },
         // 内容信息
         getList() {
@@ -318,7 +329,7 @@ export default {
             });
             this.$router.push({
                 path: "/map",
-                query: { address: address?address:'深圳市龙岗区吉华街道甘坑社区甘李二路9号金苹果创新园厂房c201', name: name, isTap: true },
+                query: { address: address ? address : '深圳市龙岗区吉华街道甘坑社区甘李二路9号金苹果创新园厂房c201', name: name, isTap: true },
             });
             Toast.clear;
         },

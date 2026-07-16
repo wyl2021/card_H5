@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e2d826c5a6bf5a867d99f3e8be65bff6ec30e1a50acff6fb7835239e2f0c0edb
-size 387
+<template>
+  <div>
+    <TXMap mapWidth="100vh" mapHeight="100vh" :coordinate="$route.query.coordinate" :address="$route.query.address" :name="$route.query.name" :isTap="Boolean($route.query.isTap)"></TXMap>
+  </div>
+</template>
+
+<script>
+import TXMap from '../components/temp/TXMap.vue';
+export default {
+  components:{
+    TXMap
+  },
+    methods:{
+
+    },
+    created() {
+      console.log(this.$route.query);
+    }
+}
+</script>
+
+<style>
+
+</style>
