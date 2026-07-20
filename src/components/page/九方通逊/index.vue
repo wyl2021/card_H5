@@ -34,7 +34,7 @@
                 </div>
 
                 <van-image v-if="userInfo && userInfo.wx_code && userInfo.wx_code.url" :src="userInfo.wx_code.url"
-                    width="60" height="60" />
+                    width="50" height="50" style="border-radius: 3px;    margin-left: 20px;" />
 
             </div>
             <div class="cardInfo">
@@ -62,7 +62,7 @@
 
         </div>
         <!-- 公司简介 -->
-        <div style="margin-bottom: 20px;">
+        <div class="jftx-tabs-wrap" style="margin-bottom: 20px;">
             <van-tabs v-model="active" animated swipeable color="#FF7D00" active-color="#FF7D00">
                 <van-tab v-for="(item, index) in tabList" :key="index" :title="item.name">
                     <div v-if="active === index">
@@ -73,7 +73,6 @@
                     </div>
                 </van-tab>
             </van-tabs>
-
         </div>
         <van-popup v-model="kfShow" round :style="{ height: '200px', width: '250px' }" :closeable="true">
             <div style="text-align: center;margin:45px  auto 0 auto; display: flex;flex-direction: column;">
@@ -360,17 +359,19 @@ export default {
 .cardName {
     font-size: 20px;
     color: #fff;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .cardEname {
     font-size: 12px;
     color: #fff;
+    font-weight: 700;
 }
 
 .cardPost {
     font-size: 14px;
     color: #fff;
+    font-weight: 700;
 }
 
 .pm {
@@ -381,6 +382,7 @@ export default {
         color: #fff;
         align-items: center;
         margin-bottom: 5px;
+        font-weight: 700;
     }
 
     .text2 {
@@ -388,6 +390,7 @@ export default {
         color: #fff;
         align-items: center;
         margin-bottom: 5px;
+        font-weight: 700;
     }
 
     .text3 {
@@ -395,6 +398,7 @@ export default {
         color: #fff;
         align-items: center;
         margin-bottom: 5px;
+        font-weight: 700;
     }
 
     .text4 {
@@ -402,6 +406,7 @@ export default {
         color: #fff;
         align-items: center;
         width: 260px;
+        font-weight: 700;
     }
 }
 
@@ -480,5 +485,12 @@ export default {
 .search {
     padding: unset !important;
     margin-top: 15px;
+}
+
+</style>
+
+<style lang="scss">
+.jftx-tabs-wrap > .van-tabs > .van-tabs__wrap {
+    border-bottom: 0.5px solid #C9CDD4;
 }
 </style>

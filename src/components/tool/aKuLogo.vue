@@ -31,10 +31,10 @@ export default {
   methods: {
     getTo() {
       console.log('getTo')
-      uni.navigateTo({
+      uni.switchTab({
         // 跳回小程序的路径
         url:
-          "/pages/index/wx" ,
+          "/pages/index/wx",
         // 以下回调方法可以不要，如果需要调试的时候可以加上
         success: function (res) {
           console.log('123'+res)

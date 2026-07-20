@@ -1,7 +1,7 @@
 <template>
     <div class="contact">
         <van-image :src="IMG + '/jftx/headerImage/lxwm.png?time=' + new Date().getTime()" width="103px"
-            height="100%"></van-image>
+            height="100%" style="margin-top: 10px;"></van-image>
 
         <div class="contact-box">
             <div v-for="(item, index) in contactList" :key="index" class="contact-item-box">

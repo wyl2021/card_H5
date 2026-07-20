@@ -100,15 +100,17 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.service-box {}
+.service-box {
+    padding-top: 10px;
+}
 
 .service-item {
     box-shadow:
-        12px 0 8px rgba(0, 0, 0, 0.02),
+        12px 0 8px rgba(0, 0, 0, 0),
         /* 右 */
         0 2px 8px rgba(0, 0, 0, 0.02),
         /* 下 */
-        -12px 0 8px rgba(0, 0, 0, 0.02);
+        -12px 0 8px rgba(0, 0, 0, 0);
     /* 左 */
 }
 

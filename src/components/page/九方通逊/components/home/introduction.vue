@@ -14,7 +14,7 @@
                             {{ item }}
                         </div>
                     </div>
-                    <hr style="width: 21px;background-color: #FF7D00; height: 2px;display: flex;margin: 0 auto;color: #FF7D00;">
+                    <hr style="width: 21px;background-color: #FF7D00; height: 2px;display: flex;margin: 0 auto;border:1px;">
                     <div v-for="item2 in zxhw.content2" :key="item2" class="zxhw-content2" v-html="formatContent2(item2)">
                     </div>
                 </div>
@@ -71,11 +71,11 @@
             <!-- 荣耀资质 -->
             <van-image :src="IMG + '/jftx/headerImage/jf/hzpt.png'" width="206px" height="100%"
                 style="margin: 10px auto;display: block;"></van-image>
-            <div v-html="getBranch('荣耀资质').rich_text" style="line-height:20px;font-size: 11px;"></div>
+            <div class="introduction-rich-text" v-html="getBranch('荣耀资质').rich_text"></div>
             <!-- 企业愿景 -->
             <van-image :src="IMG + '/jftx/headerImage/jf/qyyj.png'" width="153px" height="100%"
                 style="margin: 10px auto;display: block;"></van-image>
-            <div v-html="getBranch('企业愿景').rich_text" style="line-height:20px;font-size: 11px;"></div>
+            <div class="introduction-rich-text" v-html="getBranch('企业愿景').rich_text"></div>
         </div>
     </div>
 </template>
@@ -252,11 +252,11 @@ export default {
     }
 }
 .zxhw-title{
-    font-size: 13px;
+    font-size: 11px;
     color:#FFF;
     font-weight: 800;
     background-color: #FF8000;
-    padding: 5px 10px;
+    padding: 2px 20px;
     text-align: center;
     width: fit-content;
     border-radius: 5px;
@@ -306,6 +306,7 @@ export default {
     font-size: 10px;
     line-height: 15px;
     color:#3d3d3d;
+    font-weight: 700;
 }
 
 .zxhw-content2 {
@@ -374,6 +375,7 @@ export default {
         color: #272727;
         line-height: 16px;
         text-align: center;
+        width: 124px;
     }
     
     .introduction-dw-content /deep/ .dw-highlight {
@@ -382,6 +384,20 @@ export default {
 }
 
 
+
+.introduction-rich-text {
+    line-height: 20px;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+
+    /deep/ * {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+    }
+}
 
 .gradient-line {
     width: 100%;
