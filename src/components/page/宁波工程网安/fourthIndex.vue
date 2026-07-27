@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:db23929a54665e7a424c9cdc91d39989a699d32cbdf499e69c9d24e6e95bba4c
-size 605
+<template>
+  <div class="p-page">
+    <waContent name="网安学院招生" title="网安学院招生" :list="list"></waContent>
+    <waContent name="网安学院就业实习" title="网安学院就业实习" :list="list"></waContent>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      list: [],
+    };
+  },
+  created() {
+    this.getList();
+  },
+  methods: {
+    getList() {
+      this.$http
+        .categorySolutionTypeList({ parent_name: "列表信息" })
+        .then((item) => {
+          this.list = item.data.list;
+        });
+    },
+  },
+};
+</script>
+
+<style>
+</style>

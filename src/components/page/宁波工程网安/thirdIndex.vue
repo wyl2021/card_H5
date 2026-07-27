@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a6af99efe693fa341a15e99574a3c27b03e6eeb71cf0fd42e7c9b1ef2e417dbd
-size 658
+<template>
+  <div class="p-page">
+    <waContent   name="宁波工程学院"
+      title="宁波工程学院"
+      :list="list"></waContent>
+    <waContent   name="简介概况"
+      title="网络空间安全学院简介"
+      :list="list"></waContent>
+      <div class="h-50"></div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      list: [],
+    };
+  },
+  created() {
+    this.getList();
+  },
+  methods: {
+    getList() {
+      this.$http
+        .categorySolutionTypeList({ parent_name: "列表信息" })
+        .then((item) => {
+          this.list = item.data.list;
+        });
+    },
+  },
+};
+</script>
+
+<style>
+</style>

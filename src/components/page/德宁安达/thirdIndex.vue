@@ -1,3 +1,68 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:72f97e56a9233bb93bdaa88c9e3cc89881fe6370b2474589701e74c3d0305650
-size 1370
+<template>
+  <div>
+    <div class="contentBox" v-for="(item,index) in list" :key="index" @click="getTo(item.id)">
+      <p class="name">{{ item.name }}</p>
+      <van-image v-if="item.image" :src="item.image.url" class="image"></van-image>
+      <div class="d-flex justify-between">
+        <p class="describe">{{ item.describe }}</p>
+        <more
+            title="查看更多"
+            icon="arrow"
+            path="/contentInfo"
+            color="#666666"
+          ></more>
+      </div>
+    </div>
+
+  </div>
+</template>
+
+<script>
+export default {
+data(){
+  return{
+    list:[]
+  }
+},
+created(){
+  this.getList()
+},
+methods:{
+  getTo(id){
+      this.$router.push({
+        path:'/categorySolutionInfo',
+        query: { id: id },
+      })
+    },
+  getList(){
+    this.$http
+         .categorySolutionTypeList({ parent_name: "列表信息" })
+         .then(  (res) =>  {
+          //  console.log("列表信息",res)
+          //  this.list=res.data.list
+          const data=res.data.list.find((item)=>item.name=='动态')
+          this.list = data?data.solution_list:[];
+         });
+  }
+}
+}
+</script>
+
+<style lang="scss" scoped>
+.justify-between{
+  justify-content: space-between;
+}
+  .name{
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+  }
+  .describe{
+    font-size: 12px;
+    color: #666;
+
+  }
+  .image{
+    margin: 10px 0;
+  }
+</style>
