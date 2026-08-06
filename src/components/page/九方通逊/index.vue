@@ -8,8 +8,9 @@
                 <div style="display: flex;flex-direction: column;width: 80%;">
                     <div style="margin-left: 76px;">
                         <h1 class="cardName">{{ userInfo.name }}</h1>
-                        <h2 class="cardEname">{{ userInfo.Ename }}</h2>
-                        <h3 class="cardPost">{{ userInfo.post }}</h3>
+                        <span class="cardEname">{{ userInfo.Ename }}</span>
+                        <span class="cardCompany">深圳市九方通逊电商物流有限公司</span>
+                        <span class="cardPost">{{ userInfo.post }}</span>
                     </div>
                     <div class="pm">
                         <div class="text1">
@@ -34,7 +35,7 @@
                 </div>
 
                 <van-image v-if="userInfo && userInfo.wx_code && userInfo.wx_code.url" :src="userInfo.wx_code.url"
-                    width="50" height="50" style="border-radius: 3px;    margin-left: 20px;" />
+                    width="61" height="61" style="border-radius: 3px;margin: auto 0 0 0;" />
 
             </div>
             <div class="cardInfo">
@@ -66,9 +67,9 @@
             <van-tabs v-model="active" animated swipeable color="#FF7D00" active-color="#FF7D00">
                 <van-tab v-for="(item, index) in tabList" :key="index" :title="item.name">
                     <div v-if="active === index">
-                        <Introduction v-if="item.component === 'Introduction'" :list="introductionList" />
+                        <Introduction v-if="item.component === 'Introduction'" :list="introductionList"  />
                         <Service v-if="item.component === 'Service'" :list="serviceList" :planList="planList" />
-                        <Contact v-if="item.component === 'Contact'" :list="contactList" ref="contact"
+                        <Contact v-if="item.component === 'Contact'" :list="contactList" :planList="planList" :list2="introductionList2" ref="contact"
                             @open-dialog="getKfShow" @open-dialog-wd="getWdShow" />
                     </div>
                 </van-tab>
@@ -139,13 +140,13 @@ export default {
                     component: 'Introduction',
                 },
                 {
-                    name: "服务介绍",
-                    id: "fwjs",
+                    name: "专线物流",
+                    id: "zxwl",
                     component: 'Service',
                 },
                 {
-                    name: "联系我们",
-                    id: "lxwm",
+                    name: "海外仓配",
+                    id: "hwcp",
                     component: 'Contact',
                 },
             ], ///tab栏列表
@@ -153,6 +154,7 @@ export default {
             IMG: this.IMG,
             userInfo: {},
             introductionList: [],
+            introductionList2: [],
             serviceList: [],
             timestamp: new Date().getTime(),
             planList: [],
@@ -247,6 +249,7 @@ export default {
                     // })
                     this.list = res.data.list;
                     this.introductionList = res.data.list.find(item => item.name === '企业简介').solution_list || [];
+                    this.introductionList2 = res.data.list.find(item => item.name === '海外仓配').solution_list || [];
                     const getService = name => res.data.list.find(item => item.name === name)
 
                     this.serviceList = [
@@ -350,63 +353,76 @@ export default {
 .cardBg {
     width: 100%;
     height: 211px;
-    padding: 22px 17px 15px 22px;
+    padding: 22px 10px 15px 22px;
     background-size: 100% 100%;
     display: flex;
-    align-items: flex-end;
+
 }
 
 .cardName {
     font-size: 20px;
     color: #fff;
-    font-weight: 700;
+    font-weight: 850;
 }
 
 .cardEname {
     font-size: 12px;
     color: #fff;
-    font-weight: 700;
+    display: block;
+   
+}
+.cardCompany {
+    font-size: 10px;
+    color: #fff;
+    display: block;
+    font-weight: 650;
+   
 }
 
 .cardPost {
     font-size: 14px;
     color: #fff;
-    font-weight: 700;
+    font-weight: 650;
+    display: block;
 }
 
 .pm {
     margin-top: 23px;
 
     .text1 {
-        font-size: 12px;
         color: #fff;
         align-items: center;
-        margin-bottom: 5px;
-        font-weight: 700;
+        margin-bottom: 7px;
+        font-size: 10px;
+        font-weight: 550;
+        line-height: 12px;
     }
 
     .text2 {
-        font-size: 12px;
         color: #fff;
         align-items: center;
-        margin-bottom: 5px;
-        font-weight: 700;
+        margin-bottom: 7px;
+        font-size: 10px;
+        font-weight: 550;
+        line-height: 12px;
     }
 
     .text3 {
-        font-size: 12px;
         color: #fff;
         align-items: center;
-        margin-bottom: 5px;
-        font-weight: 700;
+        margin-bottom: 7px;
+        font-size: 10px;
+        font-weight: 550;
+        line-height: 12px;
     }
 
     .text4 {
-        font-size: 12px;
         color: #fff;
         align-items: center;
         width: 260px;
-        font-weight: 700;
+        font-size: 10px;
+        font-weight: 550;
+        line-height: 12px;
     }
 }
 

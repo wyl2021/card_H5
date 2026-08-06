@@ -89,6 +89,7 @@ export default {
             type: Array,
             default: () => [],
         },
+       
     },
     data() {
         return {
@@ -249,6 +250,7 @@ export default {
         margin: 0 5px;
         align-items: center;
         -webkit-box-align: center;
+        background: linear-gradient(180deg, #FFFFFF 0%, #FDF9F5 100%);
     }
 }
 .zxhw-title{
@@ -344,6 +346,11 @@ export default {
 
 .dw-box {
     grid-gap: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .dw-box-single {
@@ -355,11 +362,14 @@ export default {
 .dw-box-multi {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    justify-items: center;
+    align-items: stretch;
 }
 
 .introduction-dw {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFF6EF 100%);
     border-radius: 10px;
-    background-color: #FAFAFA;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -369,13 +379,16 @@ export default {
     -webkit-box-direction: normal;
     -webkit-box-align: center;
     -webkit-box-pack: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 90px;
 
     .introduction-dw-content {
         font-size: 11px;
         color: #272727;
         line-height: 16px;
         text-align: center;
-        width: 124px;
     }
     
     .introduction-dw-content /deep/ .dw-highlight {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <van-tabbar v-model="localActive" @change="changeTab" :active-color="configTabs.activeColor"
-      :inactive-color="configTabs.inactiveColor">
+      :inactive-color="configTabs.inactiveColor" :class="{ 'tabbar-jftx': isJftx }">
       <van-tabbar-item :to="i.path + '?title=' + i.text" v-for="(i, n) in configTabs.list" :key="n">
         {{ i.text }}
         <template #icon="props">
@@ -314,8 +314,10 @@ export default {
     ...mapGetters(["tarbbarActive"]),
     active() {
       return this.$route.meta.index
+    },
+    isJftx() {
+      return localStorage.getItem("id") === "九方通逊";
     }
-
   },
   // watch: {
   //   '$route': function (to, from) {
@@ -463,5 +465,33 @@ export default {
 <style lang="scss" scoped>
 /deep/ .van-tabbar {
   padding-bottom: 13px !important;
+}
+
+/deep/ .van-tabbar.tabbar-jftx {
+  border-top: none !important;
+  box-shadow: none !important;
+}
+
+/deep/ .van-tabbar.tabbar-jftx .van-tabbar-item:nth-child(2) {
+  position: relative;
+}
+
+/deep/ .van-tabbar.tabbar-jftx .van-tabbar-item:nth-child(2)::before,
+/deep/ .van-tabbar.tabbar-jftx .van-tabbar-item:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  width: 0.4px;
+  height: 36px;
+  background: linear-gradient(to bottom, #FFF 0%, #BDBDBD 50%, #FFF 100%);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/deep/ .van-tabbar.tabbar-jftx .van-tabbar-item:nth-child(2)::before {
+  left: 0;
+}
+
+/deep/ .van-tabbar.tabbar-jftx .van-tabbar-item:nth-child(2)::after {
+  right: 0;
 }
 </style>
