@@ -83,12 +83,6 @@ const router = new Router({
       component: () => import('@/pages/trilateralInfo.vue'),
       meta: { showTabbar: false, title: '详情' },
     },
-    {
-      path: '/newsInfo',
-      name: 'newsInfo',
-      component: () => import('@/pages/newsInfo.vue'),
-      meta: { showTabbar: false, title: '详情' },
-    },
   ]
 })
 

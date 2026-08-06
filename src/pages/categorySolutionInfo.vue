@@ -1,7 +1,7 @@
 <template>
   <div :class="{ 'b-color': isColor, 'p-page': isPage }" style="height: auto;min-height: 100%;">
-    <!-- 返回按钮（仅九方通逊显示） -->
-    <!-- <div v-if="isJftx" class="back-bar">
+    <!-- 返回按钮（webview 环境下显示） -->
+    <!-- <div v-if="isInWebview()" class="back-bar">
       <van-icon name="arrow-left" class="back-icon" @click="goBack" />
     </div> -->
     <!-- 加载中
@@ -438,17 +438,21 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 22px;
+  height: 44px;
   background-color: #FFFFFF;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   z-index: 100;
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.02);
+  padding-left: 12px;
+  cursor: pointer;
 }
 
 .back-icon {
-  font-size: 20px;
+  font-size: 24px;
   color: #333;
+  padding: 10px;
   cursor: pointer;
 }
 

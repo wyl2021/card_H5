@@ -173,8 +173,16 @@ export default {
          * @param {string|number} id - 文章ID
          */
         getTo(id) {
+            // 微信小程序 webview 环境：跳转到小程序原生详情页
+            if (typeof wx !== 'undefined' && wx.miniProgram) {
+                wx.miniProgram.navigateTo({
+                    url: '/pages/index/newsInfo?id=' + id
+                })
+                return
+            }
+            // H5 环境降级：使用路由跳转
             this.$router.push({
-                path: '/newsInfo',
+                path: '/categorySolutionInfo',
                 query: { 
                     id: id, 
                     isColor: true,
