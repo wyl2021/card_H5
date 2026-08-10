@@ -22,7 +22,7 @@
             <div v-for="(item, index) in contactList" :key="index" class="contact-item-box">
                 <div class="contact-item-header">
                     <div class="contact-item">
-                        <van-image :src="IMG + '/jftx/image/' + item.img + '?time=' + new Date().getTime()" width="24px"
+                        <van-image :src="IMG + '/jftx/image/' + item.img" width="24px"
                             height="24px" style="display: block;margin: 0 auto;"></van-image>
                         <span class="contact-name">{{ item.name }}</span>
 
@@ -42,7 +42,7 @@
                             </span>个</br><span>国外网点 <span style="color:#FF7D00;">8
                                 </span>个</span></span>
                     </div>
-                    <van-image :src="IMG + '/jftx/image/' + item.img2 + '?time=' + new Date().getTime()" width="121px"
+                    <van-image :src="IMG + '/jftx/image/' + item.img2" width="121px"
                         height="100%"></van-image>
                 </div>
             </div>
@@ -133,9 +133,8 @@ export default {
 <style lang="scss" scoped>
 .hw-image-box {
     background: #FFFFFF;
-    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.02);
-    border-radius: 16px 16px 16px 16px;
-    padding: 10px;
+    // box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.02);
+    // border-radius: 16px 16px 16px 16px;
     margin: 10px 0;
 }
 

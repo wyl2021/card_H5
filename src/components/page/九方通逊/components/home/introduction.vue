@@ -1,10 +1,48 @@
 <template>
+    <div>
+        <div v-for="item,index in list" :key="index">
+            <van-image v-if="item.image" :src="item.image.url" alt="" />
+        </div>
+    </div>
+</template>
+<script>
+    export default {
+        data() {
+            return {
+                
+            }
+        },
+        props: {
+            list: {
+                type: Array,
+                default: () => []
+            }
+        },
+        methods: {
+            
+        }
+    }
+</script>
+<style lang="scss" scoped>
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <template>
     <div class="introduction">
         <div class="introduction-box">
             <van-image :src="IMG + '/jftx/headerImage/jf/qyjj.png'" width="161px" height="100%"
                 style="margin: 10px 0;display: block;"></van-image>
             <div class="introduction-content">{{ getContent() }}</div>
-            <!-- 物流仓配 -->
+           
             <div class="zxhw-box" style="justify-content: space-between;">
                 <div v-for="zxhw in zxhwList" :key="zxhw.title" class="introduction-zxhw">
                     <div class="zxhw-title">{{ zxhw.title }}</div>
@@ -19,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <!-- 全球网点 -->
+       
             <van-image :src="IMG + '/jftx/headerImage/jf/qqwd.png'" width="85px" height="100%"
                 style="margin: 10px auto;display: block;"></van-image>
             <div class="introduction-organization">
@@ -37,7 +75,7 @@
             </div>
             <hr class="gradient-hr">
            
-            <!-- 国内外自营 -->
+     
             <div class="zyd-box" >
                 <iText :iconImage="IMG+'jftx/icon/address2.png'" title="国内自营网点" fontSize="12px" color="#3D3D3D"
                         :iconImageCss="{ 'width': '15px', 'height': '15px' }" font1Width="auto"
@@ -57,7 +95,7 @@
                 
                 <van-image v-if="getBranch('海外自营仓网').image" :src="getBranch('海外自营仓网').image.url" width="100%" height="100%" style="margin: 10px auto;display: block;"></van-image>
             </div>
-             <!-- 九方定位 -->
+            
             <van-image :src="IMG + '/jftx/headerImage/jf/jfdw.png'" width="85px" height="100%"
                 style="margin: 10px auto;display: block;"></van-image>
             <div :class="['dw-box', dwList.length > 2 ? 'dw-box-multi' : 'dw-box-single']">
@@ -68,11 +106,11 @@
                     <div class="introduction-dw-content" v-html="formatDwContent(dw.content)"></div>
                 </div>
             </div>
-            <!-- 荣耀资质 -->
+            
             <van-image :src="IMG + '/jftx/headerImage/jf/hzpt.png'" width="206px" height="100%"
                 style="margin: 10px auto;display: block;"></van-image>
             <div class="introduction-rich-text" v-html="getBranch('荣耀资质').rich_text"></div>
-            <!-- 企业愿景 -->
+           
             <van-image :src="IMG + '/jftx/headerImage/jf/qyyj.png'" width="153px" height="100%"
                 style="margin: 10px auto;display: block;"></van-image>
             <div class="introduction-rich-text" v-html="getBranch('企业愿景').rich_text"></div>
@@ -467,4 +505,4 @@ export default {
     background: linear-gradient(to right, #FFFFFF 0%, #FF7D00 50%, #FFFFFF 100%);
     margin: 20px 0;
 }
-</style>
+</style> -->

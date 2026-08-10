@@ -1,7 +1,7 @@
 <template>
     <div class="service">
         <div class="service-box">
-            <div class="service-item">
+            <!-- <div class="service-item">
                             <van-image :src="getBranch('跨境专线物流').img" height="100%"
                                 style="margin: 0 10px;" :loading="true"
                                 :error="true"></van-image>
@@ -21,8 +21,10 @@
                                     </div>
                                 </div>
                             </div>
-            </div>
-
+            </div> -->
+             <div v-for="item,index in list" :key="index">
+            <van-image v-if="item.image" :src="item.image.url" alt="" />
+        </div>
 
 
             <van-image :src="IMG + '/jftx/headerImage/jjfa.png'" width="211px" height="100%"
@@ -39,7 +41,7 @@
                 <div v-for="(item, index) in contactList" :key="index" class="contact-item-box">
                     <div class="contact-item-header">
                         <div class="contact-item">
-                            <van-image :src="IMG + '/jftx/image/' + item.img + '?time=' + new Date().getTime()"
+                            <van-image :src="IMG + '/jftx/image/' + item.img"
                                 width="24px" height="24px" style="display: block;margin: 0 auto;"></van-image>
                             <span class="contact-name">{{ item.name }}</span>
 
@@ -59,7 +61,7 @@
                                 </span>个</br><span>国外网点 <span style="color:#FF7D00;">8
                                     </span>个</span></span>
                         </div>
-                        <van-image :src="IMG + '/jftx/image/' + item.img2 + '?time=' + new Date().getTime()"
+                        <van-image :src="IMG + '/jftx/image/' + item.img2"
                             width="121px" height="100%"></van-image>
                     </div>
                 </div>
@@ -67,7 +69,7 @@
         </div>
         <van-popup v-model="kfShow" round :style="{ height: '200px', width: '250px' }" :closeable="true">
             <div style="text-align: center;margin:45px  auto 0 auto; display: flex;flex-direction: column;">
-                <van-image :src="IMG + '/jftx/image/kf.png' + '?time=' + new Date().getTime()" width="100px"
+                <van-image :src="IMG + '/jftx/image/kf.png'" width="100px"
                     height="100px" style="display: block;margin: 0 auto;">
                 </van-image>
                 <span style="font-size: 14px;color: #333333;margin-top: 10px;">扫码添加客服，在线咨询</span>

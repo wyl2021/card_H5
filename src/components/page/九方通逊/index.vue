@@ -35,7 +35,7 @@
                 </div>
 
                 <van-image v-if="userInfo && userInfo.wx_code && userInfo.wx_code.url" :src="userInfo.wx_code.url"
-                    width="61" height="61" style="border-radius: 3px;margin: auto 0 0 0;" />
+                    width="61" height="61" style="border-radius: 3px;margin: auto 0 0 0;"  />
 
             </div>
             <div class="cardInfo">
@@ -66,18 +66,20 @@
         <div class="jftx-tabs-wrap" style="margin-bottom: 20px;">
             <van-tabs v-model="active" animated swipeable color="#FF7D00" active-color="#FF7D00">
                 <van-tab v-for="(item, index) in tabList" :key="index" :title="item.name">
-                    <div v-if="active === index">
-                        <Introduction v-if="item.component === 'Introduction'" :list="introductionList"  />
+                    <!-- 使用 v-show 替代 v-if，让所有 tab 组件提前渲染加载图片 -->
+                    <div v-show="active === index">
+                        <Introduction v-if="item.component === 'Introduction'" :list="introductionList" />
                         <Service v-if="item.component === 'Service'" :list="serviceList" :planList="planList" />
-                        <Contact v-if="item.component === 'Contact'" :list="contactList" :planList="planList" :list2="introductionList2" ref="contact"
-                            @open-dialog="getKfShow" @open-dialog-wd="getWdShow" />
+                        <Contact v-if="item.component === 'Contact'" :list="contactList" :planList="planList"
+                            :list2="introductionList2" ref="contact" @open-dialog="getKfShow"
+                            @open-dialog-wd="getWdShow" />
                     </div>
                 </van-tab>
             </van-tabs>
         </div>
         <van-popup v-model="kfShow" round :style="{ height: '200px', width: '250px' }" :closeable="true">
             <div style="text-align: center;margin:45px  auto 0 auto; display: flex;flex-direction: column;">
-                <van-image :src="IMG + '/jftx/image/kf.png' + '?time=' + new Date().getTime()" width="100px"
+                <van-image :src="IMG + '/jftx/image/kf.png'" width="100px"
                     height="100px" style="display: block;margin: 0 auto;">
                 </van-image>
                 <span style="font-size: 14px;color: #333333;margin-top: 10px;">扫码添加客服，在线咨询</span>
@@ -169,7 +171,13 @@ export default {
         // this.getCommitUserName("c7705fae-fd7e-11f0-a136-00163e237fe6");
         this.getUserInfo();
         this.getList();
-
+        this.getList2()
+        // 预加载关键静态图片资源
+        this.preloadStaticImages()
+    },
+    mounted() {
+        // 组件挂载后预加载头部背景图
+        this.preloadHeaderBg()
     },
     watch: {
         '$route': {
@@ -182,6 +190,87 @@ export default {
     },
 
     methods: {
+        /**
+         * 预加载头部背景图（立即执行，不等待数据）
+         */
+        preloadHeaderBg() {
+            const bgUrl = `${this.IMG}/jftx/headerBg/headerBg1.png`
+            const img = new Image()
+            img.src = bgUrl
+        },
+
+        /**
+         * 预加载关键静态图片资源
+         * 通过创建 Image 对象让浏览器提前下载并缓存
+         */
+        preloadStaticImages() {
+            // 需要预加载的静态图片列表（不带时间戳，便于缓存）
+            const staticImages = [
+                // 头部图标
+                `${this.IMG}jftx/icon/phone.png`,
+                `${this.IMG}jftx/icon/email.png`,
+                `${this.IMG}jftx/icon/web.png`,
+                `${this.IMG}jftx/icon/address.png`,
+                // 卡片操作图标
+                `${this.IMG}/jftx/image/share.png`,
+                `${this.IMG}/jftx/image/phone.png`,
+                `${this.IMG}/jftx/image/address.png`,
+                // 模块标题图
+                `${this.IMG}/jftx/headerImage/jjfa.png`,
+                // 联系方式图标
+                `${this.IMG}/jftx/image/kfrxLogo.png`,
+                `${this.IMG}/jftx/image/zxkfLogo.png`,
+                `${this.IMG}/jftx/image/xxwdLogo.png`,
+                `${this.IMG}/jftx/image/kfrxBg.png`,
+                `${this.IMG}/jftx/image/zxkfBg.png`,
+                `${this.IMG}/jftx/image/xxwdBg.png`,
+                // 客服二维码
+                `${this.IMG}/jftx/image/kf.png`,
+            ]
+            // 批量预加载
+            staticImages.forEach(url => {
+                const img = new Image()
+                img.src = url
+            })
+        },
+
+        /**
+         * 预加载动态数据中的图片
+         * 数据加载完成后调用
+         */
+        preloadDynamicImages() {
+            const dynamicImages = []
+            // 收集企业简介图片
+            if (this.introductionList && this.introductionList.length) {
+                this.introductionList.forEach(item => {
+                    if (item.image && item.image.url) dynamicImages.push(item.image.url)
+                })
+            }
+            // 收集专线物流图片
+            if (this.serviceList && this.serviceList.length) {
+                this.serviceList.forEach(item => {
+                    if (item.image && item.image.url) dynamicImages.push(item.image.url)
+                })
+            }
+            // 收集海外仓配图片
+            if (this.introductionList2 && this.introductionList2.length) {
+                this.introductionList2.forEach(item => {
+                    if (item.image && item.image.url) dynamicImages.push(item.image.url)
+                })
+            }
+            // 收集解决方案图片
+            if (this.planList && this.planList.length) {
+                this.planList.forEach(item => {
+                    if (item.image && item.image.url) dynamicImages.push(item.image.url)
+                })
+            }
+            // 批量预加载
+            dynamicImages.forEach(url => {
+                const img = new Image()
+                img.src = url
+            })
+        },
+
         getKfShow() {
             this.kfShow = !this.kfShow
         },
@@ -233,9 +322,9 @@ export default {
         // 分享
         getShareUrl(userInfo) {
             Toast({
-        message: '请点击右上角「···」分享',
-        duration: 2000
-    });
+                message: '请点击右上角「···」分享',
+                duration: 2000
+            });
         },
         // 内容信息
         getList() {
@@ -244,18 +333,17 @@ export default {
                 .then((res) => {
                     // res.data.list.forEach((data)=>{
                     //   if(data.name=='简介内容'){
-
                     //   }
                     // })
                     this.list = res.data.list;
-                    this.introductionList = res.data.list.find(item => item.name === '企业简介').solution_list || [];
+                    // this.introductionList = res.data.list.find(item => item.name === '企业简介').solution_list || [];
                     this.introductionList2 = res.data.list.find(item => item.name === '海外仓配').solution_list || [];
                     const getService = name => res.data.list.find(item => item.name === name)
 
-                    this.serviceList = [
-                        { name: '跨境专线物流', list: getService('跨境专线物流') ? getService('跨境专线物流').solution_list : [], img: getService('跨境专线物流') ? getService('跨境专线物流').image.url : '' },
-                        { name: '海外仓配', list: getService('海外仓配') ? getService('海外仓配').solution_list : [], img: getService('海外仓配') ? getService('海外仓配').image.url : '' }
-                    ]
+                    // this.serviceList = [
+                    //     { name: '跨境专线物流', list: getService('跨境专线物流') ? getService('跨境专线物流').solution_list : [], img: getService('跨境专线物流') ? getService('跨境专线物流').image.url : '' },
+                    //     { name: '海外仓配', list: getService('海外仓配') ? getService('海外仓配').solution_list : [], img: getService('海外仓配') ? getService('海外仓配').image.url : '' }
+                    // ]
                     this.planList = getService('各行业国际物流解决方案') ? getService('各行业国际物流解决方案').solution_list : [];
                     this.contactList = [
                         {
@@ -277,7 +365,23 @@ export default {
                     ]
                     this.addressList = getService('线下网点') ? getService('线下网点').solution_list : []
                     console.log("企业简介列表内容", this.contactList);
+                    // 数据加载完成后预加载动态图片
+                    this.$nextTick(() => {
+                        this.preloadDynamicImages()
+                    })
                 });
+        },
+        getList2() {
+            this.$http
+                .categorySolutionTypeList({ parent_name: "名片" }).then((res) => {
+                   this.introductionList = res.data.list.find(item => item.name === '企业简介').solution_list || [];
+                    this.serviceList = res.data.list.find(item => item.name === '专线物流').solution_list || [];
+                    // 数据加载完成后预加载动态图片
+                    this.$nextTick(() => {
+                        this.preloadDynamicImages()
+                    })
+                })
+            
         },
         //判断
         getWebAddress(list, str, tacit = "-") {
@@ -357,6 +461,7 @@ export default {
     background-size: 100% 100%;
     display: flex;
 
+
 }
 
 .cardName {
@@ -369,14 +474,15 @@ export default {
     font-size: 12px;
     color: #fff;
     display: block;
-   
+
 }
+
 .cardCompany {
     font-size: 10px;
     color: #fff;
     display: block;
     font-weight: 650;
-   
+
 }
 
 .cardPost {
@@ -502,11 +608,18 @@ export default {
     padding: unset !important;
     margin-top: 15px;
 }
-
 </style>
 
 <style lang="scss">
-.jftx-tabs-wrap > .van-tabs > .van-tabs__wrap {
+.jftx-tabs-wrap>.van-tabs>.van-tabs__wrap {
     border-bottom: 0.5px solid #C9CDD4;
 }
+
+
+.van-image__loading,
+.van-image__error {
+    background-color: #f5f5f5;
+}
+
+
 </style>
