@@ -3,10 +3,13 @@
         <div class="hw-image-box">
             <div v-for="(item, idx) in getHaicangpeiImageUrl" :key="idx">
                 <van-image v-if="item && item.image && item.image.url" :src="item.image.url" width="100%" height="100%"
-                    style="display: block;margin: 0 auto;"></van-image>
+                    style="display: block;margin: 0 auto;">
+                    <template #loading>
+                        <van-loading type="spinner" size="20" />
+                    </template>
+                </van-image>
             </div>
         </div>
-
 
 
         <!-- 解决方案 -->

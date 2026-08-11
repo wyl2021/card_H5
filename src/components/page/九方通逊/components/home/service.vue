@@ -23,7 +23,11 @@
                             </div>
             </div> -->
              <div v-for="item,index in list" :key="index">
-            <van-image v-if="item.image" :src="item.image.url" alt="" />
+            <van-image v-if="item.image" :src="item.image.url" alt="">
+                <template #loading>
+                    <van-loading type="spinner" size="20" />
+                </template>
+            </van-image>
         </div>
 
 
